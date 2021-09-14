@@ -6,19 +6,76 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+Nome: Cristian
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+Gênero: Masculino
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+Idade: 20 anos
+
+Estado civil: Solteiro
+
+Cargo: Ajudante de marceneiro
+
+Educação: Ensino médio completo e cursa ensino técnico em marcenaria no SENAI
+
+Hábitos: Gosta de tomar cerveja com os amigos e jogar futebol na quadra comunitária do seu bairro.
+
+Frustrações: Acha muito trabalhoso o processo de ser atendido em uma unidade de saúde e por isso somente busca atendimento médico em casos graves.
+
+Desafios: Precisa tomar mais cuidados com sua saúde
+
+Estilo de vida: Sua vida está concentrada no que acontece dentro do seu bairro, Cristian tem amigos que conhece desde pequeno porque moram próximos uns dos outros e se encontram para beber e jogar bola quase todo fim de semana. 
+
+Tecnologias que mais usa: Faz uso quase que exclusivo do celular para busca de informações e contato com seus amigos e parentes.
+
+------------------------------------------------------------------------------------------------
+
+Nome: Vivian
+
+Gênero: Feminino
+
+Idade: 30 anos
+
+Estado Civil: Casada
+
+Cargo: Professora de Inglês
+
+Educação: Ensino Superior Completo.
+
+Hábitos: Gosta de praticar exercícios físicos e frequenta a igreja todos fins de semana.
+
+Frustrações: Sempre que tem um problema de saúde e necessita de atendimento médico, ela gasta um dia útil completo para buscar informações, marcar um atendimento e ser atendida.
+
+Desafios: Achar uma maneira mais prática de ser atendida no sistema de saúde mais próximo e conseguir repousar e se tratar nos momentos que está doente.
+
+Estilo de vida: Vivan tem seu círculo de amigos em volta dos membros de sua igreja bem como seus colegas de trabalho. Porém a maior parte do seu tempo livre ela dedica a manter sua saúde através de caminhadas e exercícios musculares além de se fazer presente para sua família.
+
+Tecnologias que mais usa: Vivan tenta não usar muito seu smartphone pois acredita que as pessoas estão viciadas nesse tipo de aparelho. Em vez disso, ela reserva momentos do seu dia para usar seu notebook e acessar seus meios de comunicação.
+
+-----------------------------------------------------------------------------------------------
+
+Nome: Jorge
+
+Gênero: Masculino
+
+Idade: 40 anos
+
+Estado Civil: Divorciado
+
+Cargo: Dono de Padaria
+
+Educação: Ensino Médio completo
+
+Hábitos: Gosta de conversar com familiares pelo whatsapp e de assistir filmes.
+
+Frustrações: Fica perdido ao procurar medicamentos e serviços no posto público de sua região e quando consegue informação sobre o local em pouco tempo a informação fica desatualizada.
+
+Desafios: Manter-se informado sobre o posto de saúde de sua região sem precisar visitar o local somente com essa finalidade.
+
+Estilo de vida: Jorge concentra seu estilo de vida em volta de sua padaria. Nela trabalham seus filhos e também é pelo ambiente do comércio que ele mantém contato com seus amigos, todos também moradores do bairro.
+
+Tecnologias que mais usa: Jorge utiliza as redes do whatsapp e do facebook para se manter informado e em contato com seus amigos e familiares.
+
 
 ## Histórias de Usuários
 
