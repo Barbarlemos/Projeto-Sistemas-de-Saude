@@ -1,4 +1,4 @@
-# Título do Projeto
+# Sistemas de Saúde
 
 `CURSO: Sistemas de Informação`
 
@@ -6,19 +6,19 @@
 
 `SEMESTRE: 1º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Pretendemos desenvolver uma solução web que permita o usuário, mediante a um cadastro prévio, uma consulta de localização e tipos de serviços de saúde disponíveis em sua comunidade, bem como informações adicionais como horários de funcionamento e agendamentos.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
+* Ricky Ramos de Oliveira
+* Andre Alves Leocadio          
+* Pedro Henrique Martins Lara          
 * Nome completo do aluno 4
 * Nome completo do aluno 5
 
 ## Orientador
 
-* Nome completo do professor 1
+* Ivre Marjorie Ribeiro Machado
 
 # Planejamento
 
