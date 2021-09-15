@@ -1,10 +1,22 @@
 # Especificações do Projeto
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
+Tendo em vista o caos gerado pela pandemia causada pelo vírus Covid-19, que teve início em março de 2020, temos vivenciado uma grande demanda por informações a respeito do sistema de saúde. Pareado a esse caos social também podemos observar uma grande quantidade de ruído que acompanha grandes fluxos de informação.
 
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+Atualmente temos dois canais principais para acessarmos informações a respeito do sistema de saúde de Belo Horizonte. São eles o Conecte Sus e o website da prefeitura de BH.
 
-## Personas
+• Conecte Sus
+
+Conecte SUS é um aplicativo, do Ministério da Saúde, que registra toda a trajetória de quem busca atendimento no Sistema Único de Saúde (SUS). Mostra, por exemplo, dados sobre atendimentos e internações do paciente. Permite a consulta de medicamentos e exames feitos e o agendamento de consultas na rede pública de saúde. Ele também dá acesso à Carteira Nacional Digital de Vacinação, permitindo que os brasileiros consultem todas as vacinas aplicadas nas redes pública e privada, entre elas, a da Covid-19.
+
+• Website da Prefeitura
+
+O website da prefeitura dispõe de tabelas de postos de saúde separadas por região. Essas tabelas contêm, localização, telefone e horários de funcionamento.
+
+https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude.
+
+Diante disso e de um breve estudo sobre nosso possível usuário elaboramos as personas, os requisitos e restrições do projeto como são apresentados abaixo:
+
+## Persona 1
 
 Nome: Cristian
 
@@ -28,7 +40,7 @@ Estilo de vida: Sua vida está concentrada no que acontece dentro do seu bairro,
 
 Tecnologias que mais usa: Faz uso quase que exclusivo do celular para busca de informações e contato com seus amigos e parentes.
 
-------------------------------------------------------------------------------------------------
+## Persona 2
 
 Nome: Vivian
 
@@ -52,7 +64,7 @@ Estilo de vida: Vivan tem seu círculo de amigos em volta dos membros de sua igr
 
 Tecnologias que mais usa: Vivan tenta não usar muito seu smartphone pois acredita que as pessoas estão viciadas nesse tipo de aparelho. Em vez disso, ela reserva momentos do seu dia para usar seu notebook e acessar seus meios de comunicação.
 
------------------------------------------------------------------------------------------------
+## Persona 3
 
 Nome: Jorge
 
@@ -101,33 +113,25 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|ID    | Descrição do Requisito                                                                            | Prioridade |
+|------|-----------------------------------------------------------------------------------------------------|----|
+|RF-001| Permitir que o usuário cadastre perfil com localizazção                                             | ALTA  | 
+|RF-002| Disponibilizar visualização de postos de saúde ativos                                               | ALTA  |
+|RF-003| Mostrar mapa com localização dos postos                                                             | ALTA  |
+|RF-004| Mostrar dados individuais de cada posto (Localização, telefone, horários e serviços,                | ALTA  |
+|RF-005| Sistema deve permitir que o próprio usuário faça requisição de cadastro de um novo posto            | ALTA  |
+|RF-006| Permitir busca e filtro de postos por serviços e especialidades                                     | MÉDIA |
+|RF-007| Permitir que o usuário deixe uma nota e review sobre cada posto                                     | BAIXA |
 
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel                            | MÉDIA | 
+|RNF-002| Sitema deve recomendar postos melhores avaliados e mais próximos do usuário                  | BAIXA |
+|RNF-003| O sistema deve possiuir integração com Google maps para mostrar rota até o posto selecionado | BAIXA |
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 ## Restrições
 
@@ -139,8 +143,3 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |02| Não pode ser desenvolvido um módulo de backend        |
 
 
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
