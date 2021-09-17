@@ -12,9 +12,7 @@ Pretendemos desenvolver uma solução web que permita o usuário, mediante a um 
 
 * Ricky Ramos de Oliveira
 * Andre Alves Leocadio          
-* Pedro Henrique Martins Lara          
-* Nome completo do aluno 4
-* Nome completo do aluno 5
+* Pedro Henrique Martins Lara
 
 ## Orientador
 
