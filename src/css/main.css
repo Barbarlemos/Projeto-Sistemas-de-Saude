@@ -93,3 +93,22 @@
 .avatar {
     width: 200px;
 }
+
+.line i {
+    font-size: 30px;
+    margin-top: 10px;
+    transition: 0.2s;
+}
+
+.line i:hover {
+    opacity: 0.3;
+}
+
+
+.list-locals .fa-thumbs-up{
+    color: var(--secondary-color);
+}
+
+.min-vh {
+    min-height: 60vh;
+}
