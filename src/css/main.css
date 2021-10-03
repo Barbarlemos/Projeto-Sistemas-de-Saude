@@ -1,18 +1,80 @@
+:root {
+    --main-color: #f8f6ec;
+    --secondary-color: #407cc4;
+}
+
+
+/* TEMPLATE */
 .logo {
-    width: 60px;
+    width: 100px;
 }
 
-.btn-pesquisa {
-    max-width: 50px;
+.search-group {
+    width: 100%;
+    position: relative;
 }
 
-.hover-tx-white {
-    color: black !important;
-}
-.hover-tx-white:hover {
-    color: white !important;
+.search-group input {
+    border: 1px solid var(--secondary-color);
+    border-radius: 100px;
 }
 
-.avatar-user {
-    width: 175px;
+.btn-header {
+    border-radius: 100px;
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    font-weight: bold;
+    margin: 2px;
+    text-align: center;
 }
+
+.btn-header:hover {
+    color: var(--main-color);
+}
+
+.search-group .fa {
+    color: var(--secondary-color);
+}
+.search-group button {
+	background: none;
+	border: none;
+	
+    color: inherit;
+	font: inherit;
+	outline: inherit;
+
+	cursor: pointer;
+	
+    padding: 0;
+    margin: 0;
+
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+}
+.navbar-custom, body, footer {
+    background-color: var(--main-color) !important;
+}
+.navbar-custom i {
+    color: var(--secondary-color) !important;
+}
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem var(--secondary-color) !important;
+}
+
+.btn-sair {
+    white-space: nowrap;
+}
+
+.line {
+    background-color: var(--secondary-color);
+    min-height: 50px;
+}
+
+#footer {
+    background-color: var(--secondary-color) !important;
+    color: var(--main-color) !important;
+}
+/* TEMPLATE */
