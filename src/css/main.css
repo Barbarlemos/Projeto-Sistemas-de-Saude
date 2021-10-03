@@ -78,3 +78,18 @@
     color: var(--main-color) !important;
 }
 /* TEMPLATE */
+
+
+.btn-outline-custom-secondary {
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.btn-outline-custom-secondary:hover {
+    color: var(--main-color);
+    background-color: var(--secondary-color);
+}
+
+.avatar {
+    width: 200px;
+}
