@@ -1,33 +1,72 @@
 
 # Projeto de Interface
 
-Visão geral da interação do usuário pelas telas do sistema e protótipo interativo das telas com as funcionalidades que fazem parte do sistema (wireframes).
-
- Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>.
+Representação da aplicação que pode ser acessada através do navegador. O usuário consegue acessar as informações sobre postos de saúde, sendo possível realizar filtros, salvar suas preferências nos favoritos e visualizar as avaliações que outros usuários cadastraram sobre o posto, além de que o administrador exclusivamente pode gerenciar os registros dos postos de saúde.
 
 ## User Flow
 
-![Exemplo de UserFlow](img/userflow.jpg)
+Nessa aplicação existe três estados em que um usuário pode se encontrar: **Deslogado**, **Logado como administrador** e **Logado como usuário**.
 
-Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
+A usabilidade da aplicação pode ser visualizada [aqui](https://xd.adobe.com/view/1fa69cfe-7b9e-4420-acf0-4e8b20ae8042-4af5/)
 
-> **Links Úteis**:
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools & Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
-
+![UserFlow](img/userflow.png)
 
 ## Wireframes
+O objetivo de cada tela em seu respectivo flow pode ser observado nas descrições a seguir.
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+### Flow Deslogado
+Nesse ponto o usuário não realizou o acesso utilizando sua conta, dessa forma nenhuma informação sobre as preferências será salva.
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+- Homepage
+Nessa tela o usuário consegue pesquisar por postos de saúde com base na localidade, tipos de serviços e especialidades além de poder ordenar como desejar.
+![homepage](img/wireframes/Wireframe001_HomepageDeslogado-1.jpg)
+
+- Painel do posto
+Nessa tela é possível abrir o mapa e visualizar as avaliações do posto.
+![](img/wireframes/Wireframe003_Perfildopostodeslogado-1.jpg)
+
+- Login
+Nessa tela o usuário informa usuário e senha, caso seja aceito redireciona para a homepage que ele possui permissão (Administrador ou Usuário).
+![](img/wireframes/Wireframe002_Login-1.jpg)
+
+- Cadastro Usuário
+Nessa tela é possível criar uma conta para o usuário, existem funcionalidades que são exclusivas para quem possui conta.
+![](img/wireframes/Wireframe001_Cadastro-1.jpg)
+
+- Resetar Senha
+Com as inúmeras senhas que são utilizadas hoje em dia é normal esquecer alguma delas, nessa tela é possível requisitar a redefinição da senha de sua conta.
+![](img/wireframes/Wireframe002_RecuperarSenha-1.jpg)
+
+### Flow Admin
+Nesse flow o usuário realizou acesso usando conta com privilégios de administrador, ele pode realizar cadastros e editar as informações sobres os postos.
+
+- Homepage
+Nessa tela o usuário consegue pesquisar por postos de saúde com base na localidade, tipos de serviços e especialidades além de poder ordenar como desejar.
+![](img/wireframes/Wireframe004_HomepageAdmin-1.jpg)
+
+- Painel do posto editável
+Permite visualizar informações do posto e possui botões para abrir o mapa, excluir e abrir a página de edição do cadastro.
+![](img/wireframes/Wireframe004_HomepageAdmin(Perfil)-1.jpg)
+
+- Editar informações do posto
+Nessa tela todos os campos do cadastro base do posto podem ser editados.
+![](img/wireframes/Wireframe004_Criar-EditarPosto-1.jpg)
+
+- Cadastrar novo posto
+Permite o usuário inserir um novo registro de algum posto de saúde.
+![](img/wireframes/Wireframe004_Criar-EditarPosto-1.jpg)
+
+### Flow Usuário
+Nessa parte o usuário realizou o acesso utilizando uma conta sem privilégios de administrador, ele pode avaliar e salvar postos em seus favoritos
+
+- Homepage
+Nessa tela o usuário consegue pesquisar por postos de saúde com base na localidade, tipos de serviços e especialidades além de poder ordenar como desejar.
+![](img/wireframes/Wireframe003_HomepageUsuárioFavoritado-1.jpg)
+
+- Painel do posto
+Nessa tela é possível adicionar o posto aos favoritos, ir para a tela de avaliações e abrir o mapa.
+![](img/wireframes/Wireframe003_HomepageUsuário(Perfil_Favorito)–1-1.jpg)
+
+- Deixar avaliação
+Permite o usuário expressar se gostou ou não dos serviços e anotar suas observações.
+![](img/wireframes/Wireframe003_Avaliar-1.jpg)
