@@ -112,3 +112,7 @@
 .min-vh {
     min-height: 60vh;
 }
+
+.far, fa {
+    font-family: "Font Awesome 5 Pro";
+}
