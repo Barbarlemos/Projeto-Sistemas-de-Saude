@@ -116,3 +116,39 @@
 .far, fa {
     font-family: "Font Awesome 5 Pro";
 }
+
+/* DROPDOWN CUSTOMIZADO COM ICONES E MENU CENTRALIZADO */
+.header-dropdown .dropdown-menu {
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+}
+
+.header-dropdown .dropdown-item {
+    font-weight: bold;
+    color: var(--main-color);
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.header-dropdown .active {
+    border-radius: 20px;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+} 
+
+
+.header-dropdown .dropdown-item:hover {
+    border-radius: 20px;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+} 
+
+@media (min-width: 500px) {
+    .header-dropdown .dropdown-menu {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        top: 100% !important;
+    }
+}
+/* DROPDOWN CUSTOMIZADO COM ICONES E MENU CENTRALIZADO */
+
