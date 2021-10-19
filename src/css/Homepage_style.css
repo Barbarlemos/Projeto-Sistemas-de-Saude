@@ -1,0 +1,285 @@
+/* -- Container de topo -------------------------------------------------------------------  */
+.container-fluid {
+    padding: 0%;
+    margin: 0px;
+}
+
+.row {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+#linhadetopo {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: center;
+    padding: 0px 20px;
+}
+
+/* -- Logomarca -------------------------------------------------------------------  */
+#containerLogo {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* -- Barra de Pesquisa -------------------------------------------------------------------  */
+#barrapesquisa {
+    border: 2px solid #407EC2;
+    border-radius: 20px;
+    background-image: url(/src/Svgs/SearchIcon.svg);
+    background-repeat: no-repeat;
+    background-size: 3%;
+    background-position: 98% 50%;  
+}
+
+/* -- Botão de Login -------------------------------------------------------------------  */
+#loginDIV {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+#LoginBTN {
+    border: none;
+    background-color: #407EC2;
+    color: white;   
+    border-radius: 30px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    padding: 10px 25px;
+    justify-self: flex-end;
+}
+
+/* -- MODAL DE LOGIN -------------------------------------------------------------------------  */
+#ModalBG {
+    background-color: #407EC2;
+}
+
+#ModalBGH {
+    justify-content: end;
+    border: none;
+    padding: 20px
+}
+
+#ModalBG img {
+    opacity: 0.3;
+    transform: scale(0.7);
+}
+
+.modal-header button{
+    background-color: transparent;
+    border: none;
+    line-height: 50%;
+    color: white;
+    transform: scale(1.2);
+    transition-property: transform;
+    transition-duration: 0.5s;            
+}
+
+.modal-header button:hover {
+    transform:scale(1.5)
+}
+
+#ModalBGF {
+    border-top: none;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-footer a {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.modal-footer a:visited {
+    color: white;
+}
+
+#ModalBGB {
+    background-image: url(/src/Svgs/BGLogoinverted.svg);
+    background-repeat: no-repeat;
+    background-position:center;
+    justify-content: center;
+    margin: 20px 10px;
+}
+
+[target="ModalForm"] {
+    margin: 10px;
+    padding: 10px;
+}
+
+[target="ModalForm"] input {
+    border-radius: 20px;
+    padding: 10px 0px;
+}
+
+[target="ModalForm"] input::placeholder{
+    transform: translateX(12px);
+}
+
+.ModalBtnContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.ModalBtnContainer button {
+    border: none;
+    background-color: white;
+    margin: 20px;
+    padding: 15px 20px;
+    border-radius: 30px;
+    color: #407EC2;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+    transition-property:transform;
+    transition-duration: 0.2s;
+}
+
+.ModalBtnContainer button:hover {
+    transform: scale(1.1);
+}
+
+#modalMASTER {
+    width: 400px;
+}
+
+
+/* -- Container de Filtros -------------------------------------------------------------------  */
+#ContainerFiltros {
+    margin: 0px;
+    padding: 0px;
+}
+
+#LinhaFiltros {
+    margin: 20px 0px;
+    padding: 0px;  
+    background-color: #407EC2;
+    height: 75px;
+    width: 100%; 
+    align-content: center;
+}
+
+.Filtros {
+    display: inline-flex;
+    justify-content: center;
+}
+
+[target="F_btnSPAN"]{
+    transform: scale(1.6);
+}
+
+.Filtros button {
+    margin: 0px 60px;
+    color: white;
+    border: none;    
+    background-color:transparent;
+    line-height: 50%;
+    transition-property: transform;
+    transition-duration: 0.8s;
+}
+
+.Filtros button:hover {
+   transform: scale(1.95);
+}
+/* -- Feed de Filtros -------------------------------------------------------------------  */
+#MostrarResult {
+    text-align: end;
+    padding-right: 3px;
+}
+
+#RegMetro {
+   text-align: start;
+   padding-left: 3px;
+   color: #407EC2;
+   font-weight: bold;
+}
+
+/* -- Lista de postos de saúde -------------------------------------------------------------------  */
+#listastyle {
+    border-bottom: 1px solid #407EC2;
+}
+
+#listastyle tr:hover {
+    background-color: rgba(64, 126, 194, 0.3)
+}
+
+.Num {
+    color: #407EC2;
+}
+
+.Likes{    
+    color: #407EC2;
+}
+
+.Likes [target="AvalPosto"] {
+    margin: 0px 10px;
+    vertical-align: text-top;
+}
+
+.Dislikes [target="NegAvalPosto"] {
+    margin: 0px 10px;
+    vertical-align: text-top;
+}
+
+/* -- Páginação -------------------------------------------------------------------  */
+.pagination > li > a
+{
+    background-color: white;
+    color: #407EC2;
+    border: 1px solid #407EC2;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: #407EC2;
+    background-color: rgba(64, 126, 194, 0.3);
+    border-color: #407EC2;
+    transform: scale(1.1);
+}
+
+.pagination > .active > a
+{
+    color: white;
+    background-color: #407EC2 !Important;
+    border: solid 1px #407EC2;
+}
+
+.pagination > .active > a:hover
+{
+    background-color: #407EC2;
+    border: solid 1px #407EC2;
+}
+
+/* -- Container Rodapé -------------------------------------------------------------------  */
+
+#LinhaRod {
+    color: white;
+    background-color: #407EC2;
+    text-align: center;
+    padding: 12px 10px;
+    font-weight: lighter;
+}
+
+#LinhaRod P {
+    margin: 10px;
+}
+
+
+
+
+
+
+
+
+
+
