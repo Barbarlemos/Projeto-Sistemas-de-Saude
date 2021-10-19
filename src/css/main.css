@@ -1,0 +1,154 @@
+:root {
+    --main-color: #f8f6ec;
+    --secondary-color: #407cc4;
+}
+
+
+/* TEMPLATE */
+.logo {
+    width: 100px;
+}
+
+.search-group {
+    width: 100%;
+    position: relative;
+}
+
+.search-group input {
+    border: 1px solid var(--secondary-color);
+    border-radius: 100px;
+}
+
+.btn-header {
+    border-radius: 100px;
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    font-weight: bold;
+    margin: 2px;
+    text-align: center;
+}
+
+.btn-header:hover {
+    color: var(--main-color);
+}
+
+.search-group .fa {
+    color: var(--secondary-color);
+}
+.search-group button {
+	background: none;
+	border: none;
+	
+    color: inherit;
+	font: inherit;
+	outline: inherit;
+
+	cursor: pointer;
+	
+    padding: 0;
+    margin: 0;
+
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+}
+.navbar-custom, body, footer {
+    background-color: var(--main-color) !important;
+}
+.navbar-custom i {
+    color: var(--secondary-color) !important;
+}
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem var(--secondary-color) !important;
+}
+
+.btn-sair {
+    white-space: nowrap;
+}
+
+.line {
+    background-color: var(--secondary-color);
+    min-height: 50px;
+}
+
+#footer {
+    background-color: var(--secondary-color) !important;
+    color: var(--main-color) !important;
+}
+/* TEMPLATE */
+
+
+.btn-outline-custom-secondary {
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.btn-outline-custom-secondary:hover {
+    color: var(--main-color);
+    background-color: var(--secondary-color);
+}
+
+.avatar {
+    width: 200px;
+}
+
+.line i {
+    font-size: 30px;
+    margin-top: 10px;
+    transition: 0.2s;
+}
+
+.line i:hover {
+    opacity: 0.3;
+}
+
+
+.list-locals .fa-thumbs-up{
+    color: var(--secondary-color);
+}
+
+.min-vh {
+    min-height: 60vh;
+}
+
+.far, fa {
+    font-family: "Font Awesome 5 Pro";
+}
+
+/* DROPDOWN CUSTOMIZADO COM ICONES E MENU CENTRALIZADO */
+.header-dropdown .dropdown-menu {
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+}
+
+.header-dropdown .dropdown-item {
+    font-weight: bold;
+    color: var(--main-color);
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.header-dropdown .active {
+    border-radius: 20px;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+} 
+
+
+.header-dropdown .dropdown-item:hover {
+    border-radius: 20px;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+} 
+
+@media (min-width: 500px) {
+    .header-dropdown .dropdown-menu {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        top: 100% !important;
+    }
+}
+/* DROPDOWN CUSTOMIZADO COM ICONES E MENU CENTRALIZADO */
+
