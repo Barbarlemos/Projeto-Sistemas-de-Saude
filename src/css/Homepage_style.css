@@ -53,6 +53,26 @@
     justify-self: flex-end;
 }
 
+/* -- Mensagem de Olá (HOMEPAGE LOGADO) -------------------------------------------------------------------------  */
+.col-sm-2 p 
+{
+    margin: 0px;
+    color: #407EC2;    
+}
+/* -- Botão de Sair (HOMEPAGE LOGADO) -------------------------------------------------------------------------  */
+
+#sairBTN
+{
+    border: 2px solid #407EC2;
+    background-color: white;
+    color: #407EC2;   
+    border-radius: 30px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    padding: 10px 25px;
+    justify-self: flex-end;
+}
+
 /* -- MODAL DE LOGIN -------------------------------------------------------------------------  */
 #ModalBG {
     background-color: #407EC2;
