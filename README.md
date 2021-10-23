@@ -13,6 +13,7 @@ Pretendemos desenvolver uma solução web que permita o usuário, mediante a um 
 * Ricky Ramos de Oliveira
 * Andre Alves Leocadio          
 * Pedro Henrique Martins Lara
+* Rafael de Oliveira Costa
 
 ## Orientador
 
