@@ -1,0 +1,126 @@
+
+/* Parte esquerda da página ------------------------------------------------------- */
+
+#LeftTOP .LEFT{
+    text-align: center;
+}
+.LEFT {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.LEFT h1 {
+    color:#407EC2;
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;    
+}
+
+/* Parte direita da página ------------------------------------------------------- */
+
+#RightTOP{
+   padding: 0px;
+}
+
+.RIGHT {
+    background-color: #407EC2;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Formulário --------------------------------------------------------------------- */
+
+#FormSUBContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+#FormSUBContainer input
+{
+    margin-bottom: 10px;
+}
+
+/* Botão de fazer cadastro ------------------------------------------------------- */
+
+.enviarBTN {
+    display: flex;
+    justify-content:flex-start;
+    margin: 20px 0px;
+}
+
+.enviarBTN button {
+    background-color: #407EC2;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+    transition-duration: transform;
+    transition-duration: 0.5s;   
+}
+
+.enviarBTN button:hover {
+    transform: scale(1.2);
+    background-color: white;
+    color: #407EC2;
+}
+
+/* inputs do formulário ------------------------------------------------------- */
+
+.adress {
+    margin-bottom: 20px;
+}
+
+.nomeemail {
+    margin-bottom: 20px;
+}
+
+#nomeform {
+    width: 30%;
+}
+
+#emailform {
+    width: 40%;
+}
+
+#cepform {
+    width: 15%;
+}
+
+#ADNUM-SUB {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+#adressform {
+    width: 50%;
+    margin-right: 20px;
+}
+
+#numform {
+    width: 10%;
+}
+
+#ADNUM-SUB2 {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+#bairroform {
+    width: 30%;
+    margin-right: 20px;
+}
+
+#cidadeform {
+    width: 30%;
+}
+
+.senhas {
+    width: 30%;
+}

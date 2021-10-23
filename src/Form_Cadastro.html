@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head>    
+<title>Formulário de cadastro</title>
+
     <!-- Importação de CSS Forms  -->
     <link rel="stylesheet" href="/src/css/Form_Style.css">
 
@@ -23,109 +25,63 @@
 </head>
 
 <body>
-    
-    <div class="topo">
 
-        <img src="/src/Svgs/Logo do site.svg" alt="Logomarca" id="logomarca">
+    <div class="container-fluid">
 
-    </div>
+        <div class="row">
 
+            <!-- Parte esquerda da página (Titulo / Fundo Branco) ------------------------------------------------------->
 
-
-    </div>
-
-    <div class="corpo">
-
-        <div class="container">
-
-            <div class="row">
-
-                <form>
-                    <div class="mb-3">
-                        <input type="text" placeholder="Nome completo">
-                    </div>                 
-
-                </form>
-
-            </div>
-
-            <div class="row">
-                <form action="">
-                    <div class="mb-3">
-
-                        <input type="text" placeholder="Email">
-
-                    </div>
-
-                </form>
-            </div>
-
-            <div class="row">
-                <form action="">
-                    <div class="mb-3">
-
-                        <input type="text" placeholder="CEP">
-
-                    </div>
-
-                </form>
-            </div>
-
-            <div class="row">
-                <form action="">
-                    <div class="mb-3">
-
-                        <input type="text" placeholder="Endereço">
-                        <input type="text" placeholder="Número">
-                        <input type="text" placeholder="complemento(Opcional)">
-
-                    </div>
-
-                </form>
-            </div>
-
-            <div class="row">
-                <form action="">
-                    <div class="mb-3">
-
-                        <input type="text" placeholder="Cidade">
-
-                    </div>
-
-                </form>
-            </div>
-
-            <div class="row">
-                <form action="">
-                    <div class="mb-3">
-
-                        <input type="text" placeholder="Senha">
-                        <input type="text" placeholder="Confirmar Senha">
-
-                    </div>
-
-                </form>
-            </div>
-
-            <form action="">
-                <div class="mb-3">
-
-                    <input type="checkbox" class="form-check-input" id="ckeckbox1">
-                    <label class="form-check-label" for="ckeckbox1">Desejo receber por email informações referentes a campanhas públicas de saúde</label>
-
+            <div class="col-4" id="LeftTOP">
+                <div class="LEFT">
+                    <h1>Formulário de Cadastro</h1>
                 </div>
+            </div>
+
+            <!-- Parte direita da página (Formulário / Fundo Azul) ------------------------------------------------------->
+
+            <div class="col-8" id="RightTOP">
+                <div class="RIGHT">
 
 
-                <button type="submit">Enviar cadastro</button>
+                    <form action="" id="FormContainer">
+                        <div class="container" id="FormSUBContainer">
 
-            </form>
+                            <div class="nomeemail">
+                                <input type="text" class="form-control" placeholder="Nome Completo" id="nomeform">
+                                <input type="text" class="form-control" placeholder="Email" id="emailform">
+                            </div>
+
+                            <div class="adress">
+
+                                <input type="text" class="form-control" placeholder="CEP" id="cepform">
+
+                                <div class="container" id="ADNUM-SUB">
+                                    <input type="text" class="form-control" placeholder="Endereço" id="adressform">
+                                    <input type="text" class="form-control" placeholder="Numero" id="numform">
+                                </div>
+
+                                <div class="container" id="ADNUM-SUB2">
+                                    <input type="text" class="form-control" placeholder="Bairro" id="bairroform">
+                                    <input type="text" class="form-control" placeholder="Cidade" id="cidadeform">
+                                </div>
+
+                            </div>
+
+                            <div class="senhas">
+                                <input type="text" class="form-control" placeholder="Senha">
+                                <input type="text" class="form-control" placeholder="Confirmar Senha">
+                            </div>
+
+                            <div class="enviarBTN">
+                                <a href="/src/Homepage_LOGADO.html"><button type="button">Fazer Cadastro</button></a>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-
     </div>
-
-    </div>
-
-
 </body>
-
 </html>
