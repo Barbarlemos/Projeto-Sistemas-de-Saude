@@ -13,12 +13,13 @@ Pretendemos desenvolver uma solução web que permita o usuário, mediante a um 
 * Ricky Ramos de Oliveira
 * Andre Alves Leocadio          
 * Pedro Henrique Martins Lara
+* Rafael de Oliveira Costa
 
 ## Orientador
 
 * Ivre Marjorie Ribeiro Machado
 
-# Planejamento
+## Planejamento
 
 | Etapa         | Período                   | Atividades |
 |  :----:   |  :----:               | ----------- |
@@ -28,10 +29,11 @@ Pretendemos desenvolver uma solução web que permita o usuário, mediante a um 
 | ETAPA 4       | 08/11/2021 - 03/12/2021   |[Programação de Funcionalidades - Javascript](docs/development.md) <br> [Testes de Software ](docs/tests.md) |
 | ETAPA 5       | 06/12/2021 - 17/12/2021   | [Apresentação](presentation/README.md) |
 
-# Código
+## Código
 
 <li><a href="src/README.md"> Código Fonte</a></li>
 
-# Apresentação
+## Apresentação
 
 <li><a href="presentation/README.md"> Apresentação da solução</a></li>
+## Follow the white rabbit!
