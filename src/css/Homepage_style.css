@@ -184,6 +184,14 @@
     align-content: center;
 }
 
+#LinhaFiltros h1 {
+    color: white;
+    text-align: center;
+    height: 100%;
+    line-height: 75px;
+    font-weight: bold;
+}
+
 .Filtros {
     display: inline-flex;
     justify-content: center;

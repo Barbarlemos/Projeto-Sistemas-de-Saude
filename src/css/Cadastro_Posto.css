@@ -1,0 +1,7 @@
+.container-cadastro-posto {
+    min-height: 65vh;
+    background-image: url("../Svgs/BGlogo.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
