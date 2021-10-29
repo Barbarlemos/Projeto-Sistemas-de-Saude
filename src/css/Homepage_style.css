@@ -305,9 +305,38 @@
 
 
 
+/* -- Menu customizado com icones -------------------------------------------------------------------  */
+.header-dropdown .dropdown-menu {
+    background-color: #407EC2;
+    color: white;
+}
 
+.header-dropdown .dropdown-item {
+    font-weight: bold;
+    color: white;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
 
+.header-dropdown .active {
+    border-radius: 20px;
+    background-color: white !important;
+    color: #407EC2 !important;
+} 
 
+.header-dropdown .dropdown-item:hover {
+    border-radius: 20px;
+    background-color: white;
+    color: #407EC2;
+} 
+
+@media (min-width: 500px) {
+    .header-dropdown .dropdown-menu {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        top: 100% !important;
+    }
+}
 
 
 
