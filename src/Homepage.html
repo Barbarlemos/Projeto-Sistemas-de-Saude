@@ -92,7 +92,7 @@
                         <div class="ModalBtnContainer">
 
                             <a href="/src/Form_Cadastro.html"><button type="button">Fazer Cadastro</button></a>
-                            
+
                             <button type="button">Entrar</button>
                         </div>
 
@@ -100,7 +100,8 @@
 
                     <div class="modal-footer" id="ModalBGF">
 
-                        <a href="#" onclick="swal('Sucesso!', 'O link para redefinição da senha foi encaminhado para o seu email', 'success');">
+                        <a href="#"
+                            onclick="swal('Sucesso!', 'O link para redefinição da senha foi encaminhado para o seu email', 'success');">
                             <p>Esqueci minha senha</p>
                         </a>
 
@@ -161,7 +162,7 @@
                     <!-- Filtro de Ordem de lista -->
                     <div class="dropdown header-dropdown">
                         <button data-bs-toggle="dropdown">
-                            <span class="material-icons-outlined" target="F_btnSPAN" >format_list_numbered</span>
+                            <span class="material-icons-outlined" target="F_btnSPAN">format_list_numbered</span>
                         </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Melhor avaliados</a></li>
@@ -176,34 +177,38 @@
 
             </div>
 
-            <!-- Feed de Filtro -->
-            <div class="d-none d-sm-block">
-                <div class="row">
-
-                    <!-- Texto Base -->
-                    <div class="col-sm-6" id="MostrarResult">
-                        <p>Mostrando resultados em</p>
-                    </div>
-
-                    <!-- Filtros Usados -->
-                    <div class="col-sm-6" id="RegMetro">
-                        <p>toda região metropolitana</p>
-                    </div>
-
-                </div>
-            </div>
-
-
-
         </div>
 
+        <div class="container">
+            <!-- Feed de Filtro -->
+            <div class="row">
+
+                <!-- Texto Base -->
+                <div class="col-6" id="MostrarResult">
+                    <p>Mostrando resultados em</p>
+                </div>
+
+                <!-- Filtros Usados -->
+                <div class="col-6" id="RegMetro">
+                    <p>toda região metropolitana</p>
+                </div>
+
+            </div>
+
+        </div>
     </div>
 
     <!-- Container Lista ----------------------------------------------------------------------------------------------------------------------------->
-    <div class="container" id="listacontainer">
+    <!-- <div class="container" id="listacontainer">
         <table class="table table-hover" id="listastyle">
-
             <tr>
+                <th>
+                    <a href="#detalhes-posto" data-bs-toggle="modal" id="ops" data-bs-target="#detalhes-posto">
+                        <span class="material-icons-outlined">
+                            info
+                        </span>
+                    </a>
+                </th>
                 <th class="Num" scope="row">1</th>
                 <td class="Nome">Centro de Saúde Alcides Lins</td>
                 <td class="Ender">Rua Panema, 275 - Concórdia, BH</td>
@@ -213,9 +218,14 @@
                 </td>
             </tr>
 
-
-
             <tr>
+                <th>
+                    <a href="#detalhes-posto" data-bs-toggle="modal" id="ops" data-bs-target="#detalhes-posto">
+                        <span class="material-icons-outlined">
+                            info
+                        </span>
+                    </a>
+                </th>
                 <th class="Num" scope="row">2</th>
                 <td class="Nome">Centro de Saúde Dom Cabral</td>
                 <td class="Ender">Praça da Comunidade, 40 - Dom Cabral, BH</td>
@@ -226,6 +236,13 @@
             </tr>
 
             <tr>
+                <th>
+                    <a href="#detalhes-posto" data-bs-toggle="modal" id="ops" data-bs-target="#detalhes-posto">
+                        <span class="material-icons-outlined">
+                            info
+                        </span>
+                    </a>
+                </th>
                 <th class="Num" scope="row">3</th>
                 <td class="Nome">Centro de Saúde Jardim Filadélfia</td>
                 <td class="Ender">Rua Régida, 309 - Jardim Filadélfia, BH</td>
@@ -236,107 +253,263 @@
             </tr>
 
             <tr>
+                <th>
+                    <a href="#detalhes-posto" data-bs-toggle="modal" id="ops" data-bs-target="#detalhes-posto">
+                        <span class="material-icons-outlined">
+                            info
+                        </span>
+                    </a>
+                </th>
                 <th class="Num" scope="row">N</th>
                 <td class="Nome">Centro de Saúde [Nome do Posto]</td>
                 <td class="Ender">[Endereço, N - Bairro, Cidade]</td>
                 <td class="Tel">Tel123-123Tel ou Tel321-321Tel</td>
                 <td class="Likes"><span class="material-icons-outlined" target="AvalPosto">thumb_up</span>N_Likes</td>
                 <td class="Dislikes"><span class="material-icons-outlined"
-                        target="NegAvalPosto">thumb_down</span>N_Deslikes</td>
+                        target="NegAvalPosto">thumb_down</span>N_Deslikes
+                </td>
             </tr>
 
             <tr>
+                <th>
+                    <a href="#detalhes-posto" data-bs-toggle="modal" id="ops" data-bs-target="#detalhes-posto">
+                        <span class="material-icons-outlined">
+                            info
+                        </span>
+                    </a>
+                </th>
                 <th class="Num" scope="row">N</th>
                 <td class="Nome">Centro de Saúde [Nome do Posto]</td>
                 <td class="Ender">[Endereço, N - Bairro, Cidade]</td>
                 <td class="Tel">Tel123-123Tel ou Tel321-321Tel</td>
                 <td class="Likes"><span class="material-icons-outlined" target="AvalPosto">thumb_up</span>N_Likes</td>
                 <td class="Dislikes"><span class="material-icons-outlined"
-                        target="NegAvalPosto">thumb_down</span>N_Deslikes</td>
+                        target="NegAvalPosto">thumb_down</span>N_Deslikes
+                </td>
             </tr>
 
             <tr>
+                <th>
+                    <a href="#detalhes-posto" data-bs-toggle="modal" id="ops" data-bs-target="#detalhes-posto">
+                        <span class="material-icons-outlined">
+                            info
+                        </span>
+                    </a>
+                </th>
                 <th class="Num" scope="row">N</th>
                 <td class="Nome">Centro de Saúde [Nome do Posto]</td>
                 <td class="Ender">[Endereço, N - Bairro, Cidade]</td>
                 <td class="Tel">Tel123-123Tel ou Tel321-321Tel</td>
                 <td class="Likes"><span class="material-icons-outlined" target="AvalPosto">thumb_up</span>N_Likes</td>
                 <td class="Dislikes"><span class="material-icons-outlined"
-                        target="NegAvalPosto">thumb_down</span>N_Deslikes</td>
+                        target="NegAvalPosto">thumb_down</span>N_Deslikes
+                </td>
             </tr>
 
             <tr>
+                <th>
+                    <a href="#detalhes-posto" data-bs-toggle="modal" id="ops" data-bs-target="#detalhes-posto">
+                        <span class="material-icons-outlined">
+                            info
+                        </span>
+                    </a>
+                </th>
                 <th class="Num" scope="row">N</th>
                 <td class="Nome">Centro de Saúde [Nome do Posto]</td>
                 <td class="Ender">[Endereço, N - Bairro, Cidade]</td>
                 <td class="Tel">Tel123-123Tel ou Tel321-321Tel</td>
                 <td class="Likes"><span class="material-icons-outlined" target="AvalPosto">thumb_up</span>N_Likes</td>
                 <td class="Dislikes"><span class="material-icons-outlined"
-                        target="NegAvalPosto">thumb_down</span>N_Deslikes</td>
+                        target="NegAvalPosto">thumb_down</span>N_Deslikes
+                </td>
             </tr>
 
             <tr>
+                <th>
+                    <a href="#detalhes-posto" data-bs-toggle="modal" id="ops" data-bs-target="#detalhes-posto">
+                        <span class="material-icons-outlined">
+                            info
+                        </span>
+                    </a>
+                </th>
                 <th class="Num" scope="row">N</th>
                 <td class="Nome">Centro de Saúde [Nome do Posto]</td>
                 <td class="Ender">[Endereço, N - Bairro, Cidade]</td>
                 <td class="Tel">Tel123-123Tel ou Tel321-321Tel</td>
                 <td class="Likes"><span class="material-icons-outlined" target="AvalPosto">thumb_up</span>N_Likes</td>
                 <td class="Dislikes"><span class="material-icons-outlined"
-                        target="NegAvalPosto">thumb_down</span>N_Deslikes</td>
+                        target="NegAvalPosto">thumb_down</span>N_Deslikes
+                </td>
             </tr>
 
             <tr>
+                <th>
+                    <a href="#detalhes-posto" data-bs-toggle="modal" id="ops" data-bs-target="#detalhes-posto">
+                        <span class="material-icons-outlined">
+                            info
+                        </span>
+                    </a>
+                </th>
                 <th class="Num" scope="row">N</th>
                 <td class="Nome">Centro de Saúde [Nome do Posto]</td>
                 <td class="Ender">[Endereço, N - Bairro, Cidade]</td>
                 <td class="Tel">Tel123-123Tel ou Tel321-321Tel</td>
                 <td class="Likes"><span class="material-icons-outlined" target="AvalPosto">thumb_up</span>N_Likes</td>
                 <td class="Dislikes"><span class="material-icons-outlined"
-                        target="NegAvalPosto">thumb_down</span>N_Deslikes</td>
-            </tr>
-
-            <tr>
-                <th class="Num" scope="row">N</th>
-                <td class="Nome">Centro de Saúde [Nome do Posto]</td>
-                <td class="Ender">[Endereço, N - Bairro, Cidade]</td>
-                <td class="Tel">Tel123-123Tel ou Tel321-321Tel</td>
-                <td class="Likes"><span class="material-icons-outlined" target="AvalPosto">thumb_up</span>N_Likes</td>
-                <td class="Dislikes"><span class="material-icons-outlined"
-                        target="NegAvalPosto">thumb_down</span>N_Deslikes</td>
-            </tr>
-
-            <tr>
-                <th class="Num" scope="row">N</th>
-                <td class="Nome">Centro de Saúde [Nome do Posto]</td>
-                <td class="Ender">[Endereço, N - Bairro, Cidade]</td>
-                <td class="Tel">Tel123-123Tel ou Tel321-321Tel</td>
-                <td class="Likes"><span class="material-icons-outlined" target="AvalPosto">thumb_up</span>N_Likes</td>
-                <td class="Dislikes"><span class="material-icons-outlined"
-                        target="NegAvalPosto">thumb_down</span>N_Deslikes</td>
-            </tr>
-
-            <tr>
-                <th class="Num" scope="row">N</th>
-                <td class="Nome">Centro de Saúde [Nome do Posto]</td>
-                <td class="Ender">[Endereço, N - Bairro, Cidade]</td>
-                <td class="Tel">Tel123-123Tel ou Tel321-321Tel</td>
-                <td class="Likes"><span class="material-icons-outlined" target="AvalPosto">thumb_up</span>N_Likes</td>
-                <td class="Dislikes"><span class="material-icons-outlined"
-                        target="NegAvalPosto">thumb_down</span>N_Deslikes</td>
-            </tr>
-
-            <tr>
-                <th class="Num" scope="row">N</th>
-                <td class="Nome">Centro de Saúde [Nome do Posto]</td>
-                <td class="Ender">[Endereço, N - Bairro, Cidade]</td>
-                <td class="Tel">Tel123-123Tel ou Tel321-321Tel</td>
-                <td class="Likes"><span class="material-icons-outlined" target="AvalPosto">thumb_up</span>N_Likes</td>
-                <td class="Dislikes"><span class="material-icons-outlined"
-                        target="NegAvalPosto">thumb_down</span>N_Deslikes</td>
+                        target="NegAvalPosto">thumb_down</span>N_Deslikes
+                </td>
             </tr>
 
         </table>
+    </div> -->
+
+
+
+    <!-- Modal Detalhes Posto ----------------------------------------------------------------------------------------------------------------------------->
+    <div class="modal fade" id="detalhes-posto" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center w-100">
+                        <div class="row">
+                            <div class="col-md-3">1</div>
+                            <div class="col-md-3">Posto xyz</div>
+                            <div class="col-md-3">R. wxyzabc, bairro defg, BH</div>
+                            <div class="col-md-3">(31) 1234 5678</div>
+                        </div>
+                    </h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col especialidade">Clínica <span class="material-icons-outlined">done</span></div>
+                        <div class="col especialidade">Laboratório <span class="material-icons-outlined">done</span>
+                        </div>
+                        <div class="col especialidade">Odontologia <span class="material-icons-outlined">close</span>
+                        </div>
+                        <div class="col especialidade">Psicologia <span class="material-icons-outlined">done</span>
+                        </div>
+                        <div class="col especialidade">Curativos <span class="material-icons-outlined">close</span>
+                        </div>
+                        <div class="col especialidade">Vacinação <span class="material-icons-outlined">done</span></div>
+                        <div class="col especialidade">Farmácia <span class="material-icons-outlined">done</span></div>
+                    </div>
+
+                    <div class="icones-avaliacao">
+                        <span class="icones">
+                            <span class="material-icons-outlined">thumb_up</span>321
+                        </span>
+                        <span class="icones">
+                            <span class="material-icons-outlined">thumb_down</span>123
+                        </span>
+                    </div>
+
+
+                    <div class="row">
+                        <div id="carouselcomentarios" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-sm-4 col-12">
+                                            <div class="comentario-posto">
+                                                <h1 class="titulo">
+                                                    Luiz avaliou como <span class="material-icons-outlined"
+                                                        target="AvalPosto">thumb_up</span> e comentou:
+                                                </h1>
+                                                <p class="corpo">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                    elit. Provident, tempora.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-12">
+                                            <div class="comentario-posto">
+                                                <h1 class="titulo">
+                                                    Luiz avaliou como <span class="material-icons-outlined"
+                                                        target="AvalPosto">thumb_up</span> e comentou:
+                                                </h1>
+                                                <p class="corpo">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                    elit. Provident, tempora.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-12">
+                                            <div class="comentario-posto">
+                                                <h1 class="titulo">
+                                                    Luiz avaliou como <span class="material-icons-outlined"
+                                                        target="AvalPosto">thumb_up</span> e comentou:
+                                                </h1>
+                                                <p class="corpo">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                    elit. Provident, tempora.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-sm-4 col-12">
+                                            <div class="comentario-posto">
+                                                <h1 class="titulo">
+                                                    Luiz avaliou como <span class="material-icons-outlined"
+                                                        target="AvalPosto">thumb_up</span> e comentou:
+                                                </h1>
+                                                <p class="corpo">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                    elit. Provident, tempora.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-12">
+                                            <div class="comentario-posto">
+                                                <h1 class="titulo">
+                                                    Luiz avaliou como <span class="material-icons-outlined"
+                                                        target="AvalPosto">thumb_up</span> e comentou:
+                                                </h1>
+                                                <p class="corpo">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                    elit. Provident, tempora.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-12">
+                                            <div class="comentario-posto">
+                                                <h1 class="titulo">
+                                                    Luiz avaliou como <span class="material-icons-outlined"
+                                                        target="AvalPosto">thumb_up</span> e comentou:
+                                                </h1>
+                                                <p class="corpo">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                    elit. Provident, tempora.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselcomentarios"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselcomentarios"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-opcoes" disabled>Favoritar</button>
+                    <button type="button" class="btn-opcoes" data-bs-dismiss="modal">Minimizar</button>
+                    <button type="button" class="btn-opcoes" disabled>Avaliar</button>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- <script>
+        document.getElementById("ops").click();
+    </script> -->
+
+
 
     <!-- Container Páginação ----------------------------------------------------------------------------------------------------------------------------->
 
