@@ -165,7 +165,7 @@
 }
 
 #modalMASTER {
-    width: 400px;
+    max-width: 400px;
 }
 
 
@@ -193,8 +193,8 @@
 }
 
 .Filtros {
-    display: inline-flex;
-    justify-content: center;
+    display: flex;
+    justify-content: space-around;
 }
 
 [target="F_btnSPAN"]{
@@ -202,7 +202,6 @@
 }
 
 .Filtros button {
-    margin: 0px 60px;
     color: white;
     border: none;    
     background-color:transparent;
@@ -230,6 +229,7 @@
 /* -- Lista de postos de saúde -------------------------------------------------------------------  */
 #listastyle {
     border-bottom: 1px solid #407EC2;
+    overflow-x: scroll !important;
 }
 
 #listastyle tr:hover {
@@ -252,6 +252,12 @@
 .Dislikes [target="NegAvalPosto"] {
     margin: 0px 10px;
     vertical-align: text-top;
+}
+
+.tabela-overflow {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
 }
 
 /* -- Detalhes posto -------------------------------------------------------------------  */
@@ -407,4 +413,7 @@
 }
 
 
+.linhas {
+    outline: 1px solid red !important;
+}
 
