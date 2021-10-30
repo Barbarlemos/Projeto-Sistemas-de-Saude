@@ -44,3 +44,15 @@
     opacity: 0.5;
     color: white;
 }
+
+.container-cadastro-posto .btn-fechar {
+    background-color: rgba(0, 0, 0, 0);
+    color: #407EC2;
+    padding: 10px;
+    min-width: 100px;
+    font-weight: bold;
+}
+
+.container-cadastro-posto .btn-fechar:hover {
+    color: white;
+}

@@ -29,7 +29,7 @@
 #barrapesquisa {
     border: 2px solid #407EC2;
     border-radius: 20px;
-    background-image: url(/src/Svgs/SearchIcon.svg);
+    background-image: url('../Svgs/SearchIcon.svg');
     background-repeat: no-repeat;
     background-size: 3%;
     background-position: 98% 50%;  
@@ -121,7 +121,7 @@
 }
 
 #ModalBGB {
-    background-image: url(/src/Svgs/BGLogoinverted.svg);
+    background-image: url('../Svgs/BGLogoinverted.svg');
     background-repeat: no-repeat;
     background-position:center;
     justify-content: center;
@@ -307,13 +307,18 @@
     vertical-align: text-top;
 }
 
-.btn-opcoes {
+
+#modal-footer .btn-opcoes {
     background-color: #fff;
     color: #407EC2;
     font-weight: bold;
     padding: 10px;
     border-radius: 15px;
     min-width: 100px;
+    text-decoration: none;
+    text-align: center;
+    font-size: medium;
+    border-radius: 1px solid black;
 }
 
 #detalhes-posto .modal-footer button:disabled {
