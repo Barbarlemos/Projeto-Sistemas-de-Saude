@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 
-<head>    
-<title>Formulário de cadastro</title>
-
+<head>
+    <title>Formulário de cadastro</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <!-- Importação de CSS Forms  -->
     <link rel="stylesheet" href="css/Form_Style.css">
 
@@ -32,7 +32,7 @@
 
             <!-- Parte esquerda da página (Titulo / Fundo Branco) ------------------------------------------------------->
 
-            <div class="col-4" id="LeftTOP">
+            <div class="col-sm-4 col-12" id="LeftTOP">
                 <div class="LEFT">
                     <h1>Formulário de Cadastro</h1>
                 </div>
@@ -40,48 +40,71 @@
 
             <!-- Parte direita da página (Formulário / Fundo Azul) ------------------------------------------------------->
 
-            <div class="col-8" id="RightTOP">
+            <div class="col-sm-8 col-12" id="RightTOP">
                 <div class="RIGHT">
 
 
                     <form action="" id="FormContainer">
                         <div class="container" id="FormSUBContainer">
-
-                            <div class="nomeemail">
-                                <input type="text" class="form-control" placeholder="Nome Completo" id="nomeform">
-                                <input type="text" class="form-control" placeholder="Email" id="emailform">
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <input type="text" class="form-control" placeholder="Nome Completo" id="nomeform">
+                                </div>
                             </div>
 
-                            <div class="adress">
+                            <div class="row">
+                                <div class="col-12 col-md-8 col-lg-6">
+                                    <input type="text" class="form-control" placeholder="Email" id="emailform">
+                                </div>
+                            </div>
 
-                                <input type="text" class="form-control" placeholder="CEP" id="cepform">
+                            <div class="row mt-4">
+                                <div class="col-12 col-lg-3 col-md-4">
+                                    <input type="text" class="form-control" placeholder="CEP" id="cepform">
+                                </div>
+                            </div>
 
-                                <div class="container" id="ADNUM-SUB">
+                            <div class="row">
+                                <div class="col-12 col-lg-6 col-md-7">
                                     <input type="text" class="form-control" placeholder="Endereço" id="adressform">
+                                </div>
+                                <div class="col-12 col-lg-2 col-md-3">
                                     <input type="text" class="form-control" placeholder="Numero" id="numform">
                                 </div>
-
-                                <div class="container" id="ADNUM-SUB2">
-                                    <input type="text" class="form-control" placeholder="Bairro" id="bairroform">
-                                    <input type="text" class="form-control" placeholder="Cidade" id="cidadeform">
-                                </div>
-
                             </div>
 
-                            <div class="senhas">
-                                <input type="text" class="form-control" placeholder="Senha">
-                                <input type="text" class="form-control" placeholder="Confirmar Senha">
+                            <div class="row">
+                                <div class="col-12 col-lg-4 col-md-5">
+                                    <input type="text" class="form-control" placeholder="Bairro" id="bairroform">
+                                </div>
+                                <div class="col-12 col-lg-4 col-md-5">
+                                    <input type="text" class="form-control" placeholder="Cidade" id="cidadeform">
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-4">
+                                <div class="col-12 col-lg-4 col-md-5">
+                                    <input type="text" class="form-control" placeholder="Senha">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 col-lg-4 col-md-5">
+                                    <input type="text" class="form-control" placeholder="Confirmar Senha">
+                                </div>
                             </div>
 
                             <div class="enviarBTN">
                                 <a href="Homepage_LOGADO.html"><button type="button">Fazer Cadastro</button></a>
                             </div>
-
                         </div>
+
+
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>

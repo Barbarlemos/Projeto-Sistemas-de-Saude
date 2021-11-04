@@ -4,11 +4,19 @@
 #LeftTOP .LEFT{
     text-align: center;
 }
+
+
 .LEFT {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+@media (max-width: 576px) {
+    .LEFT {
+        height: 20vh;
+    }
 }
 
 .LEFT h1 {
@@ -71,7 +79,7 @@
 
 /* inputs do formulário ------------------------------------------------------- */
 
-.adress {
+/* .adress {
     margin-bottom: 20px;
 }
 
@@ -123,4 +131,4 @@
 
 .senhas {
     width: 30%;
-}
+} */
