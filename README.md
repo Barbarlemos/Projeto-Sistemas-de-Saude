@@ -11,9 +11,9 @@ Pretendemos desenvolver uma solução web que permita o usuário, mediante a um 
 ## Integrantes
 
 * Ricky Ramos de Oliveira
-* Andre Alves Leocadio          
-* Pedro Henrique Martins Lara
+* Andre Alves Leocadio
 * Rafael de Oliveira Costa
+* Pedro Henrique Martins Lara
 
 ## Orientador
 
@@ -36,4 +36,4 @@ Pretendemos desenvolver uma solução web que permita o usuário, mediante a um 
 ## Apresentação
 
 <li><a href="presentation/README.md"> Apresentação da solução</a></li>
-## Follow the white rabbit!
+<!-- Follow the white rabbit! ----->
