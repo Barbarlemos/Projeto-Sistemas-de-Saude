@@ -4,7 +4,7 @@
 
 `DISCIPLINA: Projeto - Aplicações Web`
 
-`SEMESTRE: 1º`
+`SEMESTRE: 2º`
 
 Pretendemos desenvolver uma solução web que permita o usuário, mediante a um cadastro prévio, uma consulta de localização e tipos de serviços de saúde disponíveis em sua comunidade, bem como informações adicionais como horários de funcionamento e agendamentos.
 
