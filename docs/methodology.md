@@ -12,7 +12,7 @@ Serão realizadas reuniões semanais via plataforma Teams para alinhamentos mais
 
 A ferramenta de controle de versão adotada no projeto foi o [Git](https://git-scm.com/), sendo o [Github](https://github.com) a plataforma escolhida para hospedagem do repositório.
 
-### Branchs
+## Branches
 O projeto segue a seguinte convenção para o nome de branchs:
 
 - `main`: Versão estável já testada do software
@@ -21,7 +21,7 @@ O projeto segue a seguinte convenção para o nome de branchs:
 - `fix/<name-fix>`: Correções em problemas específicos
 - `refactor/<name-refactor>`: Melhorias no código existente que não alteram o comportamento. 
 
-### Issues
+## Issues
 Quanto à gerência de issues, o projeto adota a seguinte convenção para as etiquetas:
 
 - `documentation`: mudanças em relação a documentação
@@ -29,11 +29,12 @@ Quanto à gerência de issues, o projeto adota a seguinte convenção para as et
 - `bug`: comportamento incorreto em uma funcionalidade
 - `enhancement`: melhoria de uma funcionalidade
 
-### Tags
+## Tags
 As tags que representam as releases possuem o seguinte formato `v0.0` onde a parte inteira do número representa grandes mudanças no comportamento da aplicação e a parte fracionária representa correções de bugs ou ajustes que afetam poucas features.
 
 ## Gerenciamento de Projeto
-### Processo
+
+## Processo
 
 O projeto será implementado com o auxílio da ferramenta **Automated Kanban** do GitHub e será composto por 5 Sprints, sendo elas:
 
@@ -45,9 +46,9 @@ O projeto será implementado com o auxílio da ferramenta **Automated Kanban** d
 | 4º | Implantação e testes funcionais |
 | 5º | Testes de usabilidade e apresentação da solução |
 
-Para cada etapa, irá ocorrer um *brainstorming* que definirá os Backlogs, suas datas de entrega e seus responsáveis.
+Para cada etapa, irá ocorrer um *brainstorming* (debate) que define os Backlogs, suas datas de entrega e seus responsáveis.
 
-### Ferramentas
+## Ferramentas
 Para a execução do projeto serão necessárias algumas ferramentas, para diversas tarefas desde comunicação à prototipação.
 
 - Comunicação
