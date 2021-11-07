@@ -1,18 +1,20 @@
 # Introdução
 
 
-Tendo em vista o caos gerado pela pandemia causada pelo vírus Covid-19, que teve início em março de 2020, temos vivenciado uma grande demanda por informações a respeito do sistema de saúde. Pareado a esse caos social também podemos observar uma grande quantidade de ruído que acompanha grandes fluxos de informação.
+Tendo em vista o caos gerado pela pandemia do Corona Vírus, iniciando aproximadamente em março de 2020, viemos experienciando uma grande demanda por informações à respeito do sistema de saúde. Em paralelo ao caos social é possivel também, observar uma grande quantidade de ruído, acompanhada por grandes fluxos de informação.
 
-Atualmente temos dois canais principais para acessarmos informações a respeito do sistema de saúde de Belo Horizonte. São eles o Conecte Sus, que funciona a nível nacional, e o website da prefeitura de BH.
+Atualmente temos dois canais principais para acessarmos informações relacionadas ao sistema de saúde em Belo Horizonte. Sendo uma o Conecte Sus, operando nacionalmente, e o website da prefeitura de Belo Horizonte, para o perímetro urbano da grande BH.
 
 ## Objetivos
 
-Pretendemos fazer um estudo a respeito de como é levado para população informações sobre atendimento em postos públicos de saúde em Belo Horizonte e como podemos tornar essa mais eficiente o acesso e interação dos cidadãos com esse tipo de informação.
+Pretendemos entender como é levada pra população informações acerca de atendimento nas unidades públicas de saúde e como podemos tornar mais didático o acesso e a interação dos cidadãos da grande BH com esse tipo de informação.
 
 ## Justificativa
 
-Dado o contexto de grande busca por informações a respeito de atendimentos para as comunidades da região metropolitana de Belo Horizonte, acreditamos que é de extrema importância a busca por melhores práticas para difundir informações atualizadas a respeito do sistema de saúde, bem como facilitar o máximo possível a interação com esse grande volume de dados.
+Visto a grande demanda por informações a respeito de atendimentos em comunidades da região metropolitana de Belo Horizonte, acreditamos que é de extrema importância viabilizar práticas mais assertivas de difusão de informações atualizadas a respeito do sistema de saúde, bem como facilitar ao máixmo a interação com o grande volume de dados (Big Data).
 
 ## Público-Alvo
 
-Contemplamos como público alvo cidadãos entre 20 e 40 anos que residam em comunidades do tipo subúrbios e periferias de Belo Horizonte (e região metropolitana) e que disponham de acesso a internet via smartphone ou computador pessoal.
+Contemplamos o público alvo sendo a populão na faixa de 20 a 40 anos e, que residam em comunidades como subúrbios e periferias da grande BH, e, que disponham de acesso a internet via smartphone ou computador pessoal.
+
+Saiba mais em: Especificações do projeto > https://bit.ly/3mRBpiL
