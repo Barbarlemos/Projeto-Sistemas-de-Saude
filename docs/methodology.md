@@ -13,7 +13,7 @@ Serão realizadas reuniões semanais via plataforma Teams para alinhamentos mais
 A ferramenta de controle de versão adotada no projeto foi o [Git](https://git-scm.com/), sendo o [Github](https://github.com) a plataforma escolhida para hospedagem do repositório.
 
 ## Branches
-O projeto segue a seguinte convenção para o nome de branchs:
+O projeto segue a seguinte convenção para o nome de branches:
 
 - `main`: Versão estável já testada do software
 - `dev`: Versão em desenvolvimento da aplicação
