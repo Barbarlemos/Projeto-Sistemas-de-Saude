@@ -11,10 +11,10 @@ Pretendemos entender como é levada pra população informações acerca de aten
 
 ## Justificativa
 
-Visto a grande demanda por informações a respeito de atendimentos em comunidades da região metropolitana de Belo Horizonte, acreditamos que é de extrema importância viabilizar práticas mais assertivas de difusão de informações atualizadas a respeito do sistema de saúde, bem como facilitar ao máixmo a interação com o grande volume de dados (Big Data).
+Visto a grande demanda por informações a respeito de atendimentos em comunidades da região metropolitana de Belo Horizonte, acreditamos que é de extrema importância viabilizar práticas mais assertivas de difusão de informações atualizadas a respeito do sistema de saúde, bem como facilitar ao máximo a interação com o grande volume de dados (Big Data).
 
-## Público-Alvo
+## Público-alvo
 
-Contemplamos o público alvo sendo a população na faixa de 20 a 40 anos e, que residam em comunidades como subúrbios e periferias da grande BH, e, que disponham de acesso a internet via smartphone ou computador pessoal.
+Contemplamos o público-alvo sendo a população na faixa de 20 a 40 anos e, que residam em comunidades como subúrbios e periferias da grande BH, e, que disponham de acesso a internet via smartphone ou computador pessoal.
 
 Saiba mais em: Especificações do projeto > https://bit.ly/3mRBpiL
