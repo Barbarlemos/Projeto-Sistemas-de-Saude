@@ -15,6 +15,6 @@ Visto a grande demanda por informações a respeito de atendimentos em comunidad
 
 ## Público-Alvo
 
-Contemplamos o público alvo sendo a populão na faixa de 20 a 40 anos e, que residam em comunidades como subúrbios e periferias da grande BH, e, que disponham de acesso a internet via smartphone ou computador pessoal.
+Contemplamos o público alvo sendo a população na faixa de 20 a 40 anos e, que residam em comunidades como subúrbios e periferias da grande BH, e, que disponham de acesso a internet via smartphone ou computador pessoal.
 
 Saiba mais em: Especificações do projeto > https://bit.ly/3mRBpiL
