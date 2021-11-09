@@ -56,6 +56,76 @@ function handlerEsqueciSenha() {
 
 }
 
+
+function handlerCep() {
+    const cep = document.getElementsByName("cep")[0].value;
+    const url = `https://viacep.com.br/ws/${cep}/json/`;
+    fetch(url).then(res => res.json()).then(obj => {
+        document.getElementsByName("rua")[0].value = obj.logradouro;
+        document.getElementsByName("bairro")[0].value = obj.bairro;
+        document.getElementsByName("cidade")[0].value = obj.localidade;
+    }).catch(err => {
+        swal("Erro", "Cep inválido, não iremos te impedir de realizar o cadastro mas tenha certeza de estar inserindo local correto", "error");
+    });
+}
+
+
+function handlerCadastrarUsuario(event) {
+    event.preventDefault();
+    const nome = document.getElementsByName("nome")[0].value;
+    const email = document.getElementsByName("email")[0].value;
+    const cep = document.getElementsByName("cep")[0].value;
+    const rua = document.getElementsByName("rua")[0].value;
+    const numero = document.getElementsByName("numero")[0].value;
+    const bairro = document.getElementsByName("bairro")[0].value;
+    const cidade = document.getElementsByName("cidade")[0].value;
+    const senha = document.getElementsByName("senha")[0].value;
+    const senha1 = document.getElementsByName("senha1")[0].value;
+
+    const validos = [nome,
+        email,
+        cep,
+        rua,
+        numero,
+        bairro,
+        cidade,
+        senha,
+        senha1].map(i => !!i);
+
+    if(validos.includes(false)) {
+        swal("Erro", "Todos os campos devem ser preenchidos", "error");
+        return;
+    }
+
+    const usuario = {
+        nome,
+        email,
+        cep,
+        rua,
+        numero,
+        bairro,
+        cidade,
+        senha,
+        login: email,
+    };
+
+    if(senha !== senha1) {
+        swal("Erro","A senhas digitadas não são iguais", "error");
+    } else {
+        try {
+            adicionarUsuario(usuario);
+            swal("Sucesso", "Usuário adicionado!", "success");
+            setTimeout(()=> {
+                location.href = 'Homepage.html';
+            }, 2000);
+        } catch (error) {
+            swal("Erro",error.message, "error");
+        }
+    }
+
+
+}
+
 function logout() {
     localStorage.removeItem("usuario");
     location.href = 'Homepage.html';
