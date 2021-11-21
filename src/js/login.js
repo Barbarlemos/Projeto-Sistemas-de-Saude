@@ -4,12 +4,26 @@ function carregarUsuarios() {
         {
             login: "admin",
             senha: "senha123",
-            papel: "admin"
+            papel: "admin",
+            bairro: "admin",
+            cep: "00000000",
+            cidade: "admin",
+            email: "admin@admin.com",
+            nome: "Admin",
+            numero: "0",
+            rua: "Rua Admin"
         },
         {
             login: "usuario",
             senha: "senha123",
-            papel: "usuario"
+            papel: "usuario",
+            bairro: "usuario",
+            cep: "00000000",
+            cidade: "usuario",
+            email: "usuario@test.com",
+            nome: "Usuário",
+            numero: "0",
+            rua: "Rua do usuário"
         }
     ];
     

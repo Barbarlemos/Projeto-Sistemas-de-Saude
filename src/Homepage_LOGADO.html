@@ -29,6 +29,7 @@
     <!-- Importação SweetAlert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+    <script src="js/login.js"></script>
 </head>
 
 
@@ -55,12 +56,12 @@
 
                 <!-- MENSAGEM DE OLÁ -->
                 <div class="col-sm-2" id="olamsg">
-                    <p>Olá [Nome do Usuário]!!</p>
+                    <p id="mensagem-nome-usuario">Olá [Nome do Usuário]!!</p>
                 </div>
 
                 <!-- BOTÃO DE SAIR -->
                 <div class="col-sm-1" id="loginDIV">
-                    <a href="Homepage.html"><button type="button" id="sairBTN">Sair</button></a>
+                    <a href="Homepage.html"><button type="button" id="sairBTN" onclick="logout()">Sair</button></a>
                 </div>
 
             </div>
@@ -561,5 +562,17 @@
 
 </body>
 
+<script>
+    try {
+        const usuarioLogado = pegarUsuarioLogado();
+        if(usuarioLogado.papel === "usuario") {
+            document.getElementById("mensagem-nome-usuario").innerText = `Olá ${usuarioLogado.nome}!!`;
+        } else {
+            throw new Error("Usuário sem permissão a esta página");
+        }
+    } catch (error) {
+        logout();
+    }
+</script>
 
 </html>
