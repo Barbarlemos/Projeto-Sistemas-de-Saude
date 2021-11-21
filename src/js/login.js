@@ -121,6 +121,7 @@ function handlerCadastrarUsuario(event) {
         cidade,
         senha,
         login: email,
+        papel: "usuario"
     };
 
     if(senha !== senha1) {
