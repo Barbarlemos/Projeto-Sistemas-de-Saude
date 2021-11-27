@@ -1,28 +1,83 @@
 # Plano de Testes de Software
 
-Apresente os cenários de testes utilizados na realização dos testes da sua aplicação. Escolha cenários de testes que demonstrem os requisitos sendo satisfeitos.
+Para garantir que o sistema possa atender a todos os requisitos funcionais que estão descritos [aqui](especification.md), serão empregados testes manuais.
 
-Enumere quais cenários de testes foram selecionados para teste. Neste tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
+As funcionalidades que são reponsáveis por cumprir os requisitos funcionais são:
+- RF-001
+    - Login
+    - Cadastro de usuário
+- RF-002 e RF-006
+    - Filtros na listagem dos postos
+- RF-003
+    - Abrir localização do posto no google maps
+- RF-004
+    - Abrir painel com mais informações do posto
+- RF-005
+    - Cadastro de posto
+- RF-007
+    - Cadastrar avaliações sobre o posto
+
+## Casos de teste
+Todos os casos de testes serão efetuados por todos os 7 usuários abaixo, além dos desenvolvedores:
+
+|#|Nome|Idade|
+|---|---|---|
+|1|Cristian|20|
+|2|Jorge|40|
+|3|Leandro|20|
+|4|Luciano|18|
+|5|Marcelo|21|
+|6|Marcos|12|
+|7|Viviane|30|
+
+### Login
+- Deve permitir login com credenciais válidas
+- Não deve permitir login com credenciais inválidas de login
+- Não deve permitir acessar os paineis logados sem realizar o login
+
+### Cadastro de usuário
+- Deve permitir o cadastro de um usuário comum
+- Não deve permitir o cadastro de usuário que já existe
+
+### Filtros na listagem dos postos
+- Ao selecionar os filtros apenas os postos que cumprem todos os requisitos escolhidos devem ser mostrados em tela
+
+### Abrir localização do posto no google maps
+- Ao clicar no link deve ser aberto uma nova guia com a localização do posto no google maps 
+
+### Abrir painel com mais informações do posto
+- Ao clicar no botão de info na listagem dos postos deve ser aberto uma janela com mais informações do posto
+
+### Cadastro de posto
+- Ao realizar o registro de um posto ele deve aparecer na tela de listagem dos postos
+
+### Cadastrar avaliações sobre o posto
+- Ao cadastrar avaliação do posto ela deve aparecer na tela de "mais informações do posto"
  
-## Ferramentas de Testes (Opcional)
+## Registro de Testes de Software
 
-Comente sobre as ferramentas de testes utilizadas.
- 
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
-> - [Criação e Geração de Planos de Teste de Software](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+Após a realização de todos os testes foi pedido para que os usuários apontassem uma pontuação de 0 a 10 para cada uma das funcionalidades baseadas nos seguintes atributos:
+- Interface
+- Intuitividade
+- Velocidade
 
-# Registro de Testes de Software
-
-Relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado em um plano de testes pré-definido.
+A média de cada pontuação é apresentada na tabela a seguir.
+|Atributo|Média|
+|---|---|
+|Interface|9.4|
+|Intuitividade|9.0|
+|Velocidade|10|
 
 ## Avaliação
 
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
+Após a visualização dos resultados pode ser notado que o sistema precisa de mais intuitividade, uma solução apontada pelos usuários envolvidos nos testes foi a criação de mensagens descritivas ao lado dos campos de cadastros, e um breve manual de fácil acesso nas telas do sistema. A velocidade em que o sistema devolve as respostas foi um ponto considerado forte durante os testes.
 
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
+Para as próximas etapas do projeto algumas funcionalidades foram sugeridas:
+- Salvar filtros customizados
+- Favoritar o posto
+- Menu de ajuda
+- Possibilidade dos postos responderem as avaliações
+
+## Próximos passos
+
+Para as próximas Sprints de desenvolvimento uma nova coluna de backlog seria adicionada ao projeto para podermos priorizar e desenvolver as tarefas de forma mais acertiva. O uso de pull requests se tornaria mais frequente e adotariamos um modelo de nomeclatura para as branchs.
