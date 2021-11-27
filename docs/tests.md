@@ -32,7 +32,7 @@ Todos os casos de testes serão efetuados por todos os 7 usuários abaixo, além
 
 ### Login
 - Deve permitir login com credenciais válidas
-- Não deve permitir login com credenciais inválidas de login
+- Não deve permitir login com credenciais inválidas
 - Não deve permitir acessar os paineis logados sem realizar o login
 
 ### Cadastro de usuário
