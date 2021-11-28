@@ -129,10 +129,9 @@ function handlerCadastrarUsuario(event) {
     } else {
         try {
             adicionarUsuario(usuario);
-            swal("Sucesso", "Usuário adicionado!", "success");
-            setTimeout(()=> {
+            swal("Sucesso", "Usuário adicionado!", "success").then(()=>{
                 location.href = 'Homepage.html';
-            }, 2000);
+            });
         } catch (error) {
             swal("Erro",error.message, "error");
         }
