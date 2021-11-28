@@ -2,6 +2,7 @@ function cadst() {
 
 
     const postoObj = {
+        id: new Date().getTime(),
         nome: String(document.getElementById("nome").value),
         cep: String(document.getElementById("cep").value),
         adress: String(document.getElementById("adress").value),
@@ -64,9 +65,23 @@ function cadst() {
         }
     }
 
-    const postObjJson = JSON.stringify(postoObj)
 
-    localStorage.setItem(PostoLocal, postObjJson)
+    if (localStorage.getItem("arrayPostos") === null) {
 
+        const arrayPostos = []
+        arrayPostos.push(postoObj)
+        let arrayPostosJson = JSON.stringify(arrayPostos)
+        localStorage.setItem("arrayPostos", arrayPostosJson)
+
+    } else {
+
+        const arrayPostos = JSON.parse(localStorage.getItem("arrayPostos"))
+        arrayPostos.push(postoObj)
+        let arrayPostosJson = JSON.stringify(arrayPostos)
+        localStorage.setItem("arrayPostos", arrayPostosJson)
+
+    }
+
+    alert(postoObj.nome + "cadastrado com sucesso!")
 
 }

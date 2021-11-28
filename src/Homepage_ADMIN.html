@@ -206,7 +206,7 @@
         <div class="tabela-overflow">
             <table class="table table-hover" id="listastyle">
 
-                <tr>
+                <tr id="ListaRow1">
                     <th>
                         <a href="#detalhes-posto" data-bs-toggle="modal" id="ops" data-bs-target="#detalhes-posto">
                             <span class="material-icons-outlined">
@@ -214,17 +214,16 @@
                             </span>
                         </a>
                     </th>
-                    <th class="Num" scope="row">1</th>
-                    <td class="Nome">Centro de Saúde Alcides Lins</td>
-                    <td class="Ender">Rua Panema, 275 - Concórdia, BH</td>
-                    <td class="Tel">3277-6002 ou 3277-6003</td>
-                    <td class="Likes"><span class="material-icons-outlined" target="AvalPosto">thumb_up</span>432</td>
-                    <td class="Dislikes"><span class="material-icons-outlined"
+                    <th class="Num" scope="row" id="NumeroPosto1">1</th>
+                    <td class="Nome" id="NomePosto1">Centro de Saúde Alcides Lins</td>
+                    <td class="Ender" id="RuaPosto1">Rua Panema, 275 - Concórdia, BH</td>
+                    <td class="Tel" id="TelPosto1">3277-6002 ou 3277-6003</td>
+                    <td class="Likes" id="LikesPosto1"><span class="material-icons-outlined"
+                            target="AvalPosto">thumb_up</span>432</td>
+                    <td class="Dislikes" id="DislikesPosto1"><span class="material-icons-outlined"
                             target="NegAvalPosto">thumb_down</span>123
                     </td>
                 </tr>
-
-
 
             </table>
         </div>
@@ -418,22 +417,22 @@
         </div>
     </div>
 
+    <script src="/src/js/updateListaPostos.js"></script>
+
 </body>
 
-<<<<<<< Updated upstream
-=======
-<script>
+<<<<<<< Updated upstream=======<script>
     try {
-        const usuarioLogado = pegarUsuarioLogado();
-        if (usuarioLogado.papel === "admin") {
-            document.getElementById("mensagem-nome-usuario").innerText = `Olá ${usuarioLogado.nome}!!`;
-        } else {
-            throw new Error("Usuário sem permissão a esta página");
-        }
-    } catch (error) {
-        logout();
+    const usuarioLogado = pegarUsuarioLogado();
+    if (usuarioLogado.papel === "admin") {
+    document.getElementById("mensagem-nome-usuario").innerText = `Olá ${usuarioLogado.nome}!!`;
+    } else {
+    throw new Error("Usuário sem permissão a esta página");
     }
-</script>
->>>>>>> Stashed changes
+    } catch (error) {
+    logout();
+    }
+    </script>
+    >>>>>>> Stashed changes
 
-</html>
+    </html>
