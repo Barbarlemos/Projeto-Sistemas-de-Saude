@@ -67,11 +67,11 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="avaliacao" id="avaliacao-1" checked>
+                                <input class="form-check-input" type="radio" name="avaliacao" id="avaliacao-1" checked value="SIM">
                                 <label class="form-check-label" for="avaliacao-1">Gostei</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="avaliacao" id="avaliacao-2">
+                                <input class="form-check-input" type="radio" name="avaliacao" id="avaliacao-2" value="NAO">
                                 <label class="form-check-label" for="avaliacao-2">Não Gostei</label>
                             </div>
                         </div>
@@ -79,14 +79,14 @@
 
                     <div class="row">
                         <div class="col-12">
-                            <textarea class="form-control" cols="50" rows="5"></textarea>
+                            <textarea class="form-control" id="comentario_avaliacao" cols="50" rows="5"></textarea>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-12 text-end">
-                            <a href="#" onclick="history.go(-1)" class="btn btn-fechar">Fechar</a>
-                            <button type="submit" class="btn btn-salvar">Salvar</button>
+                            <a href="Homepage.html" class="btn btn-fechar">Fechar</a>
+                            <button type="button" onclick="handleAvaliar()" class="btn btn-salvar">Salvar</button>
                         </div>
                     </div>
 
@@ -117,5 +117,9 @@
 
 </body>
 
+<!-- Importação SweetAlert -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script src="js/avaliacaoPosto.js"></script>
 
 </html>
