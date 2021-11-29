@@ -22,6 +22,11 @@
     <link
         href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
         rel="stylesheet">
+
+    <!-- Importação SweetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="js/login.js"></script>
 </head>
 
 <body>
@@ -37,16 +42,15 @@
 
             <!-- Parte direita da página (Formulário / Fundo Azul) ------------------------------------------------------->
             <div class="col-sm-8 col-12" id="RightTOP">
-
                 <div class="RIGHT">
 
-                    <form action="" id="FormContainer">
+                    <form onsubmit="handlerCadastrarUsuario(event)" id="FormContainer">
 
                         <div class="container" id="FormSUBContainer">
                             <div class="row">
 
                                 <div class="col-12 col-md-6 col-lg-4">
-                                <input type="text" class="form-control" placeholder="Nome Completo" id="nomeform">
+                                <input type="text" class="form-control" name="nome" placeholder="Nome Completo" id="nomeform">
                                 </div>
 
                             </div>
@@ -54,7 +58,7 @@
                             <div class="row">
 
                                 <div class="col-12 col-md-8 col-lg-6">
-                                <input type="text" class="form-control" placeholder="Email" id="emailform">
+                                <input type="text" class="form-control" name="email" placeholder="Email" id="emailform">
                                 </div>
 
                             </div>
@@ -62,7 +66,7 @@
                             <div class="row mt-4">
 
                                 <div class="col-12 col-lg-3 col-md-4">
-                                <input type="text" class="form-control" placeholder="CEP" id="cepform">
+                                <input type="number" class="form-control" name="cep" onblur="handlerCep()" placeholder="CEP" id="cepform">
                                 </div>
 
                             </div>
@@ -70,11 +74,11 @@
                             <div class="row">
 
                                 <div class="col-12 col-lg-6 col-md-7">
-                                <input type="text" class="form-control" placeholder="Endereço" id="adressform">
+                                <input type="text" class="form-control" name="rua" placeholder="Endereço" id="adressform">
                                 </div>
 
                                 <div class="col-12 col-lg-2 col-md-3">
-                                <input type="text" class="form-control" placeholder="Numero" id="numform">
+                                <input type="text" class="form-control" name="numero" placeholder="Numero" id="numform">
                                 </div>
 
                             </div>
@@ -82,18 +86,18 @@
                             <div class="row">
 
                                 <div class="col-12 col-lg-4 col-md-5">
-                                <input type="text" class="form-control" placeholder="Bairro" id="bairroform">
+                                <input type="text" class="form-control" name="bairro" placeholder="Bairro" id="bairroform">
                                 </div>
                                 
                                 <div class="col-12 col-lg-4 col-md-5">
-                                <input type="text" class="form-control" placeholder="Cidade" id="cidadeform">
+                                <input type="text" class="form-control" name="cidade" placeholder="Cidade" id="cidadeform">
                                 </div>
 
                             </div>
                             
                             <div class="row mt-4">
                                 <div class="col-12 col-lg-4 col-md-5">
-                                <input type="text" class="form-control" placeholder="Senha">
+                                <input type="password" class="form-control" name="senha" placeholder="Senha">
                                 </div>
 
                             </div>
@@ -101,14 +105,14 @@
                             <div class="row">
 
                                 <div class="col-12 col-lg-4 col-md-5">
-                                <input type="text" class="form-control" placeholder="Confirmar Senha">
+                                <input type="password" class="form-control" name="senha1" placeholder="Confirmar Senha">
                                 </div>
 
                             </div>
 
                             <div class="enviarBTN">
-                                <a href="Homepage_LOGADO.html"><button type="button">Cadastrar</button></a>
-                        </div>
+                                <button type="submit">Cadastrar</button>
+                            </div>
 
                         </div>
 
