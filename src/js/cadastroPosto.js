@@ -79,7 +79,6 @@ function cadst() {
         arrayPostos.push(postoObj)
         let arrayPostosJson = JSON.stringify(arrayPostos)
         localStorage.setItem("arrayPostos", arrayPostosJson)
-
     }
 
     alert(postoObj.nome + " cadastrado com sucesso!")

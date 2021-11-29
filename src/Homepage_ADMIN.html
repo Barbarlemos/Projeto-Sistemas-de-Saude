@@ -585,7 +585,16 @@
             </ul>
         </nav>
 
+        <!-- Botão para cadastrar novo posto ------------------------------------------------------------------------------------------------------>
+
+        <div class="col-sm-12" id="AddpostoDiv">
+            <a href="/src/Cadastro_Posto.html"><button class="newBtn">+ Novo posto</button></a>
+        </div>
+
     </div>
+
+
+
 
     <!-- Container Rodapé ----------------------------------------------------------------------------------------------------------------------------->
 
@@ -596,6 +605,8 @@
                 totam asperiores illo atque obcaecati perferendis.</p>
         </div>
     </div>
+
+    <!-- Script para atualizar lista com "arrayPostos" que está salvado no local storage ---------------------------------------------------->
 
     <script>
         window.onload = function atualizar() {
@@ -628,6 +639,7 @@
 </body>
 
 <script>
+
     try {
         const usuarioLogado = pegarUsuarioLogado();
         if (usuarioLogado.papel === "admin") {
