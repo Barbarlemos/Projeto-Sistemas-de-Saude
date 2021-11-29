@@ -82,6 +82,6 @@ function cadst() {
 
     }
 
-    alert(postoObj.nome + "cadastrado com sucesso!")
+    alert(postoObj.nome + " cadastrado com sucesso!")
 
 }
