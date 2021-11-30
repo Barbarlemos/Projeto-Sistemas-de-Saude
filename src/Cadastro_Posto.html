@@ -51,7 +51,7 @@
 
 
         <div id="LinhaFiltros">
-            <h1>Cadastro</h1>
+            <h1>Cadastro de Posto</h1>
         </div>
     </div>
 
@@ -65,7 +65,8 @@
                 <div class="col-md-8 col-12">
                     <div class="form-group">
                         <label for="nome">Nome do posto</label>
-                        <input id="nome" type="text" class="form-control form-control-lg" placeholder="Posto 1">
+                        <input id="nome" type="text" class="form-control form-control-lg"
+                            placeholder="Ex:Centro de Saúde Santa Rosa">
                     </div>
                 </div>
             </div>
@@ -75,7 +76,7 @@
                 <div class="col-md-4 col-8">
                     <div class="form-group">
                         <label>Cep</label>
-                        <input type="text" class="form-control form-control-lg" placeholder="0000000">
+                        <input id="cep" type="text" class="form-control form-control-lg" placeholder="00000-000">
                     </div>
                 </div>
             </div>
@@ -84,13 +85,14 @@
                 <div class="col-md-6 col-8">
                     <div class="form-group">
                         <label>Endereço</label>
-                        <input type="text" class="form-control form-control-lg" placeholder="Rua dois de março">
+                        <input id="adress" type="text" class="form-control form-control-lg"
+                            placeholder="Ex:Rua dois de março">
                     </div>
                 </div>
                 <div class="col-md-2 col-4">
                     <div class="form-group">
                         <label>Nº</label>
-                        <input type="text" class="form-control form-control-lg" placeholder="323 A">
+                        <input id="num" type="text" class="form-control form-control-lg" placeholder="Ex: 323 A">
                     </div>
                 </div>
             </div>
@@ -99,13 +101,14 @@
                 <div class="col-md-6 col-12">
                     <div class="form-group">
                         <label>Bairro</label>
-                        <input type="text" class="form-control form-control-lg" placeholder="Nova união">
+                        <input id="bairro" type="text" class="form-control form-control-lg"
+                            placeholder="Ex: Nova união">
                     </div>
                 </div>
                 <div class="col-md-4 col-12">
                     <div class="form-group">
                         <label>Município</label>
-                        <select class="form-control form-control-lg">
+                        <select id="Mun" class="form-control form-control-lg">
                             <option>Belo Horizonte</option>
                             <option>Betim</option>
                             <option>Caeté</option>
@@ -130,7 +133,8 @@
                 <div class="col-md-4 col-8">
                     <div class="form-group">
                         <label>Telefone</label>
-                        <input type="text" class="form-control form-control-lg" placeholder="(31)99234-0192">
+                        <input id="Tel" type="text" class="form-control form-control-lg"
+                            placeholder="Ex: (31)99234-0192">
                     </div>
                 </div>
             </div>
@@ -141,13 +145,13 @@
                 <div class="col-md-4 col-12">
                     <div class="form-group">
                         <label>Horário de abertura</label>
-                        <input type="time" class="form-control form-control-lg" placeholder="Rua dois de março">
+                        <input id="abert" type="text" class="form-control form-control-lg" placeholder="HH:MM">
                     </div>
                 </div>
                 <div class="col-md-4 col-12">
                     <div class="form-group">
                         <label>Horário de fechamento</label>
-                        <input type="time" class="form-control form-control-lg" placeholder="323 A">
+                        <input id="fech" type="text" class="form-control form-control-lg" placeholder="HH:MM">
                     </div>
                 </div>
             </div>
@@ -155,27 +159,53 @@
             <hr />
 
             <div class="row">
-                <div class="col-md-9 col-12">
-                    <div class="form-group">
-                        <label>Selecione os serviços</label>
-                        <select class="form-control form-control-lg" multiple size="7">
-                            <option>Clínica</option>
-                            <option>Laboratório</option>
-                            <option>Odontologia</option>
-                            <option>Psicologia</option>
-                            <option>Curativos</option>
-                            <option>Vacinação</option>
-                            <option>Farmácia</option>
-                        </select>
-                    </div>
+
+                <label id="selectPostoLabel">Selecione os serviços disponíveis no posto</label>
+
+                <div class="col-ms-2">
+                    <input type="checkbox" id="clinicaBox">
+                    <label for="clinicaBox">Clínica</label>
                 </div>
+
+                <div class="col-ms-2">
+                    <input type="checkbox" id="labBox">
+                    <label for="labBox">Laboratório</label>
+                </div>
+
+                <div class="col-ms-2">
+                    <input type="checkbox" id="odonBox">
+                    <label for="odonBox">Odontologia</label>
+                </div>
+
+                <div class="col-ms-2">
+                    <input type="checkbox" id="psiBox">
+                    <label for="psiBox">Psicologia</label>
+                </div>
+
+                <div class="col-ms-2">
+                    <input type="checkbox" id="vacBox">
+                    <label for="vacBox">Vacinação</label>
+                </div>
+
+                <div class="col-ms-2">
+                    <input type="checkbox" id="curBox">
+                    <label for="curBox">Curativos</label>
+                </div>
+
+                <div class="col-ms-2">
+                    <input type="checkbox" id="farmBox">
+                    <label for="farmBox">Farmácia</label>
+                </div>
+
             </div>
 
             <hr />
+
 
             <div class="row">
                 <div class="col-12 text-end">
-                    <button type="submit" class="btn btn-salvar">Salvar</button>
+                    <a href="/src/Homepage_ADMIN.html"><button type="button" onclick="cadst()"
+                            class="btn btn-salvar">Salvar</button></a>
                 </div>
             </div>
         </form>
@@ -188,9 +218,11 @@
     <div class="container-fluid">
         <div class="row" id="LinhaRod">
             <!-- Dica de uso da plataforma -->
-            <p>Dica: Caso esteja no computador segure a tecla Ctrl para selecionar múltiplos serviços.</p>
+            <p>Dica: Todas as informações sobre o posto de saúde podem ser editadas após a criação.</p>
         </div>
     </div>
+
+    <script src="/src/js/cadastroPosto.js"></script>
 
 </body>
 

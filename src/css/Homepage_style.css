@@ -367,6 +367,33 @@
     border: solid 1px #407EC2;
 }
 
+
+/* -- Botão de criar Posto ---------------------------------------------------------------  */
+#AddpostoDiv {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.newBtn {
+    border: 2px solid #407EC2;
+    background-color: #407EC2;
+    color: #ffffff;   
+    border-radius: 30px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    padding: 10px 35px;
+    margin:10px;
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+.newBtn:hover {
+    border: 2px solid #407EC2;
+    background-color: white;
+    color: #407EC2;  
+    transform: scale(1.1);
+}
+
 /* -- Container Rodapé -------------------------------------------------------------------  */
 
 #LinhaRod {
@@ -421,4 +448,5 @@
 .linhas {
     outline: 1px solid red !important;
 }
+
 
