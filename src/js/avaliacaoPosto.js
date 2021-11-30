@@ -33,7 +33,7 @@ requirirIdPagina();
 async function handleAvaliar() {
     const avaliacao = {
         mensagem: String(document.getElementById("comentario_avaliacao").value).trim(),
-        usuario: 'admin', // DEVE SER TROCADO PARA O USUARIO LOGADO ATUALMENTE, POREM ESSE TRATAMENTO ESTA INCLUIDO NOS COMMITS MAIS RECENTES DA BRANCH MAIN
+        usuario: pegarUsuarioLogado().nome,
         gostou: document.querySelector('input[name="avaliacao"]:checked').value === "SIM"
     };
 
