@@ -162,8 +162,19 @@ function renderizarLinhaPosto({id, nome, Municipio, Tel, adress, bairro, numero,
         </tr>
     `;
 }
+
+function buscarParametrosURL() {
+    const url = new URLSearchParams(location.search);
+    return {
+        regiao: url.get("regiao"),
+        servico: url.get("servico"),
+        ordenacao: url.get("ordenacao"),
+    };
+}
+
 function renderizarListaPostos(idLista, habilitarAvaliacao=true) {
     let html = "";
+    const parametros = buscarParametrosURL();
     for(const posto of carregarTodosPostos()) {
         html += renderizarLinhaPosto(posto, habilitarAvaliacao);
     }
@@ -184,12 +195,12 @@ function fregiao(valor) {
 
 function fservico(valor) {
     const url = new URLSearchParams(location.search);
-    url.set("regiao", valor);
+    url.set("servico", valor);
     location.href = location.href.split("?")[0] + "?" + url.toString();
 }
 
 function fordenacao(valor) {
     const url = new URLSearchParams(location.search);
-    url.set("regiao", valor);
+    url.set("ordenacao", valor);
     location.href = location.href.split("?")[0] + "?" + url.toString();
 }

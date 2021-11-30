@@ -30,6 +30,9 @@
 
     <script src="js/login.js"></script>
 
+    <script src="js/listagemPosto.js"></script>
+
+
 </head>
 
 
@@ -130,20 +133,20 @@
                             <span class="material-icons-outlined" target="F_btnSPAN">map</span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item active" href="#">Todas regiões</a></li>
-                            <li><a class="dropdown-item" href="#">Belo Horizonte</a></li>
-                            <li><a class="dropdown-item" href="#">Betim</a></li>
-                            <li><a class="dropdown-item" href="#">Caeté</a></li>
-                            <li><a class="dropdown-item" href="#">Contagem</a></li>
-                            <li><a class="dropdown-item" href="#">Ibirité</a></li>
-                            <li><a class="dropdown-item" href="#">Lagoa Santa</a></li>
-                            <li><a class="dropdown-item" href="#">Nova Lima</a></li>
-                            <li><a class="dropdown-item" href="#">Pedro Leopoldo</a></li>
-                            <li><a class="dropdown-item" href="#">Raposos</a></li>
-                            <li><a class="dropdown-item" href="#">Ribeirão das Neves</a></li>
-                            <li><a class="dropdown-item" href="#">Rio Acima</a></li>
-                            <li><a class="dropdown-item" href="#">Sabará</a></li>
-                            <li><a class="dropdown-item" href="#">Vespasiano</a></li>
+                            <li><a onclick="fregiao('Todas regiões')" class="dropdown-item active" href="#">Todas regiões</a></li>
+                            <li><a onclick="fregiao('Belo Horizonte')" class="dropdown-item" href="#">Belo Horizonte</a></li>
+                            <li><a onclick="fregiao('Betim')" class="dropdown-item" href="#">Betim</a></li>
+                            <li><a onclick="fregiao('Caeté')" class="dropdown-item" href="#">Caeté</a></li>
+                            <li><a onclick="fregiao('Contagem')" class="dropdown-item" href="#">Contagem</a></li>
+                            <li><a onclick="fregiao('Ibirité')" class="dropdown-item" href="#">Ibirité</a></li>
+                            <li><a onclick="fregiao('Lagoa Santa')" class="dropdown-item" href="#">Lagoa Santa</a></li>
+                            <li><a onclick="fregiao('Nova Lima')" class="dropdown-item" href="#">Nova Lima</a></li>
+                            <li><a onclick="fregiao('Pedro Leopoldo')" class="dropdown-item" href="#">Pedro Leopoldo</a></li>
+                            <li><a onclick="fregiao('Raposos')" class="dropdown-item" href="#">Raposos</a></li>
+                            <li><a onclick="fregiao('Ribeirão das Neves')" class="dropdown-item" href="#">Ribeirão das Neves</a></li>
+                            <li><a onclick="fregiao('Rio Acima')" class="dropdown-item" href="#">Rio Acima</a></li>
+                            <li><a onclick="fregiao('Sabará')" class="dropdown-item" href="#">Sabará</a></li>
+                            <li><a onclick="fregiao('Vespasiano')" class="dropdown-item" href="#">Vespasiano</a></li>
                         </ul>
                     </div>
 
@@ -153,14 +156,14 @@
                             <span class="material-icons-outlined" target="F_btnSPAN">medical_services</span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Todos serviços</a></li>
-                            <li><a class="dropdown-item" href="#">Clínica</a></li>
-                            <li><a class="dropdown-item" href="#">Laboratório</a></li>
-                            <li><a class="dropdown-item" href="#">Odontologia</a></li>
-                            <li><a class="dropdown-item" href="#">Psicologia</a></li>
-                            <li><a class="dropdown-item" href="#">Curativos</a></li>
-                            <li><a class="dropdown-item" href="#">Vacinação</a></li>
-                            <li><a class="dropdown-item" href="#">Farmácia</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="fservico('Todos serviços')">Todos serviços</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="fservico('Clínica')">Clínica</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="fservico('Laboratório')">Laboratório</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="fservico('Odontologia')">Odontologia</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="fservico('Psicologia')">Psicologia</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="fservico('Curativos')">Curativos</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="fservico('Vacinação')">Vacinação</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="fservico('Farmácia')">Farmácia</a></li>
                         </ul>
                     </div>
 
@@ -170,11 +173,11 @@
                             <span class="material-icons-outlined" target="F_btnSPAN">format_list_numbered</span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Melhor avaliados</a></li>
-                            <li><a class="dropdown-item" href="#">Mais avaliados</a></li>
-                            <li><a class="dropdown-item" href="#">Mais procurados</a></li>
-                            <li><a class="dropdown-item" href="#">Somente abertos</a></li>
-                            <li><a class="dropdown-item" href="#">Alfabética</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="fordenacao('Melhor avaliados')">Melhor avaliados</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="fordenacao('Mais avaliados')">Mais avaliados</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="fordenacao('Mais procurados')">Mais procurados</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="fordenacao('Somente abertos')">Somente abertos</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="fordenacao('Alfabética')">Alfabética</a></li>
                         </ul>
                     </div>
 
@@ -598,7 +601,6 @@
     </div>
 
     <!-- Script para atualizar lista com "arrayPostos" que está salvado no local storage ---------------------------------------------------->
-    <script src="js/listagemPosto.js"></script>
     <script>
         window.onload = function () {
             renderizarListaPostos("listastyle", false);
