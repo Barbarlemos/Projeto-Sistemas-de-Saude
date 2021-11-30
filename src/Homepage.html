@@ -598,31 +598,10 @@
     </div>
 
     <!-- Script para atualizar lista com "arrayPostos" que está salvado no local storage ---------------------------------------------------->
-
+    <script src="js/listagemPosto.js"></script>
     <script>
-        window.onload = function atualizar() {
-
-            let PostoInfo = JSON.parse(localStorage.getItem("arrayPostos"))
-            console.log(PostoInfo)
-
-            if (PostoInfo !== null) {
-
-                for (i = 0; i < PostoInfo.length; i++) {
-
-                    let numero = "Nu" + String(i)
-                    let nome = "No" + String(i)
-                    let end = "End" + String(i)
-                    let phone = "Tel" + String(i)
-
-                    document.getElementById(numero).innerHTML = i + 1
-                    document.getElementById(nome).innerHTML = PostoInfo[i].nome
-                    document.getElementById(end).innerHTML = PostoInfo[i].adress + " , " + PostoInfo[i].numero + " - " + PostoInfo[i].bairro + " , " + PostoInfo[i].Municipio + "."
-                    document.getElementById(phone).innerHTML = PostoInfo[i].Tel
-
-                }
-
-            }
-
+        window.onload = function () {
+            renderizarListaPostos("listastyle", false);
         }
     </script>
 
