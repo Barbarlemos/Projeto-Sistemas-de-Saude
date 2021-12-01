@@ -230,6 +230,12 @@
 
     <script src="js/cadastroPosto.js"></script>
 
+    <script>
+        const usuarioLogado = pegarUsuarioLogado();
+        if (!(usuarioLogado && usuarioLogado.papel === "admin")) {
+            location.href = "Homepage.html";
+        }
+    </script>
 </body>
 
 
