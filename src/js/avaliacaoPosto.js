@@ -24,7 +24,7 @@ const postoAtual = buscarPosto(idPosto);
 async function requirirIdPagina() {
     if(!postoAtual) {
         await swal("Ops!", "Nenhum posto foi informado ao acessar essa página", "warning");
-        location.href = "Homepage.html";
+        location.href = "Homepage_LOGADO.html";
     }
 }
 requirirIdPagina();
@@ -48,7 +48,7 @@ async function handleAvaliar() {
         postoAtual.avaliacoes.push(avaliacao);
         salvarPosto(postoAtual);
         await swal("Sucesso", "A sua avaliação foi registrada!", "success");
-        location.href = "Homepage.html";
+        location.href = "Homepage_LOGADO.html";
     }
 
 }

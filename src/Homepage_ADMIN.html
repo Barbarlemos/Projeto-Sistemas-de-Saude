@@ -30,6 +30,7 @@
 
     <script src="js/login.js"></script>
 
+    <script src="js/listagemPosto.js"></script>
 </head>
 
 
@@ -50,7 +51,7 @@
 
                 <!-- BARRA DE PESQUISA -->
                 <div class="col-xl-6">
-                    <input class="form-control" type="text" placeholder="Pesquisar postos de saúde próximos de"
+                    <input class="form-control" type="text" placeholder="Pesquisar postos de saúde" onchange="renderizarListaPostos('listastyle', false, this.value);"
                         aria-label="Search" id="barrapesquisa">
                 </div>
 
@@ -130,20 +131,24 @@
                             <span class="material-icons-outlined" target="F_btnSPAN">map</span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item active" href="#">Todas regiões</a></li>
-                            <li><a class="dropdown-item" href="#">Belo Horizonte</a></li>
-                            <li><a class="dropdown-item" href="#">Betim</a></li>
-                            <li><a class="dropdown-item" href="#">Caeté</a></li>
-                            <li><a class="dropdown-item" href="#">Contagem</a></li>
-                            <li><a class="dropdown-item" href="#">Ibirité</a></li>
-                            <li><a class="dropdown-item" href="#">Lagoa Santa</a></li>
-                            <li><a class="dropdown-item" href="#">Nova Lima</a></li>
-                            <li><a class="dropdown-item" href="#">Pedro Leopoldo</a></li>
-                            <li><a class="dropdown-item" href="#">Raposos</a></li>
-                            <li><a class="dropdown-item" href="#">Ribeirão das Neves</a></li>
-                            <li><a class="dropdown-item" href="#">Rio Acima</a></li>
-                            <li><a class="dropdown-item" href="#">Sabará</a></li>
-                            <li><a class="dropdown-item" href="#">Vespasiano</a></li>
+                            <li><a onclick="fregiao('Todas regiões')" class="dropdown-item" href="#">Todas regiões</a>
+                            </li>
+                            <li><a onclick="fregiao('Belo Horizonte')" class="dropdown-item" href="#">Belo Horizonte</a>
+                            </li>
+                            <li><a onclick="fregiao('Betim')" class="dropdown-item" href="#">Betim</a></li>
+                            <li><a onclick="fregiao('Caeté')" class="dropdown-item" href="#">Caeté</a></li>
+                            <li><a onclick="fregiao('Contagem')" class="dropdown-item" href="#">Contagem</a></li>
+                            <li><a onclick="fregiao('Ibirité')" class="dropdown-item" href="#">Ibirité</a></li>
+                            <li><a onclick="fregiao('Lagoa Santa')" class="dropdown-item" href="#">Lagoa Santa</a></li>
+                            <li><a onclick="fregiao('Nova Lima')" class="dropdown-item" href="#">Nova Lima</a></li>
+                            <li><a onclick="fregiao('Pedro Leopoldo')" class="dropdown-item" href="#">Pedro Leopoldo</a>
+                            </li>
+                            <li><a onclick="fregiao('Raposos')" class="dropdown-item" href="#">Raposos</a></li>
+                            <li><a onclick="fregiao('Ribeirão das Neves')" class="dropdown-item" href="#">Ribeirão das
+                                    Neves</a></li>
+                            <li><a onclick="fregiao('Rio Acima')" class="dropdown-item" href="#">Rio Acima</a></li>
+                            <li><a onclick="fregiao('Sabará')" class="dropdown-item" href="#">Sabará</a></li>
+                            <li><a onclick="fregiao('Vespasiano')" class="dropdown-item" href="#">Vespasiano</a></li>
                         </ul>
                     </div>
 
@@ -153,14 +158,15 @@
                             <span class="material-icons-outlined" target="F_btnSPAN">medical_services</span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Todos serviços</a></li>
-                            <li><a class="dropdown-item" href="#">Clínica</a></li>
-                            <li><a class="dropdown-item" href="#">Laboratório</a></li>
-                            <li><a class="dropdown-item" href="#">Odontologia</a></li>
-                            <li><a class="dropdown-item" href="#">Psicologia</a></li>
-                            <li><a class="dropdown-item" href="#">Curativos</a></li>
-                            <li><a class="dropdown-item" href="#">Vacinação</a></li>
-                            <li><a class="dropdown-item" href="#">Farmácia</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="fservico('Todos serviços')">Todos
+                                    serviços</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="fservico('Clínica')">Clínica</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="fservico('Laboratório')">Laboratório</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="fservico('Odontologia')">Odontologia</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="fservico('Psicologia')">Psicologia</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="fservico('Curativos')">Curativos</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="fservico('Vacinação')">Vacinação</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="fservico('Farmácia')">Farmácia</a></li>
                         </ul>
                     </div>
 
@@ -170,17 +176,18 @@
                             <span class="material-icons-outlined" target="F_btnSPAN">format_list_numbered</span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Melhor avaliados</a></li>
-                            <li><a class="dropdown-item" href="#">Mais avaliados</a></li>
-                            <li><a class="dropdown-item" href="#">Mais procurados</a></li>
-                            <li><a class="dropdown-item" href="#">Somente abertos</a></li>
-                            <li><a class="dropdown-item" href="#">Alfabética</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="fordenacao('Melhor avaliados')">Melhor
+                                    avaliados</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="fordenacao('Mais avaliados')">Mais
+                                    avaliados</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="fordenacao('Alfabética')">Alfabética</a></li>
                         </ul>
                     </div>
 
                 </div>
 
             </div>
+
         </div>
 
         <div class="container">
@@ -194,14 +201,14 @@
 
                 <!-- Filtros Usados -->
                 <div class="col-6" id="RegMetro">
-                    <p>toda região metropolitana</p>
+                    <p id="regiao_atual">toda região metropolitana</p>
                 </div>
 
             </div>
 
         </div>
-
     </div>
+
 
     <!-- Container Lista ----------------------------------------------------------------------------------------------------------------------------->
     <div class="container" id="listacontainer">
@@ -225,186 +232,6 @@
                             target="AvalPosto">thumb_up</span>[Template]
                     </td>
                     <td class="Dislikes" id="Di0"><span class="material-icons-outlined"
-                            target="NegAvalPosto">thumb_down</span>[Template]
-                    </td>
-                </tr>
-
-                <tr>
-                    <th>
-                        <a href="#detalhes-posto" data-bs-toggle="modal" id="ops" data-bs-target="#detalhes-posto">
-                            <span class="material-icons-outlined">
-                                info
-                            </span>
-                        </a>
-                    </th>
-                    <th class="Num" id="Nu1" scope="row">[Template]</th>
-                    <td class="Nome" id="No1">[Template]</td>
-                    <td class="Ender" id="End1">[Template]</td>
-                    <td class="Tel" id="Tel1">[Template]</td>
-                    <td class="Likes" id="Li1"><span class="material-icons-outlined"
-                            target="AvalPosto">thumb_up</span>[Template]
-                    </td>
-                    <td class="Dislikes" id="Di1"><span class="material-icons-outlined"
-                            target="NegAvalPosto">thumb_down</span>[Template]
-                    </td>
-                </tr>
-
-                <tr>
-                    <th>
-                        <a href="#detalhes-posto" data-bs-toggle="modal" id="ops" data-bs-target="#detalhes-posto">
-                            <span class="material-icons-outlined">
-                                info
-                            </span>
-                        </a>
-                    </th>
-                    <th class="Num" id="Nu2" scope="row">[Template]</th>
-                    <td class="Nome" id="No2">[Template]</td>
-                    <td class="Ender" id="End2">[Template]</td>
-                    <td class="Tel" id="Tel2">[Template]</td>
-                    <td class="Likes" id="Li2"><span class="material-icons-outlined"
-                            target="AvalPosto">thumb_up</span>[Template]
-                    </td>
-                    <td class="Dislikes" id="Di2"><span class="material-icons-outlined"
-                            target="NegAvalPosto">thumb_down</span>[Template]
-                    </td>
-                </tr>
-
-                <tr>
-                    <th>
-                        <a href="#detalhes-posto" data-bs-toggle="modal" id="ops" data-bs-target="#detalhes-posto">
-                            <span class="material-icons-outlined">
-                                info
-                            </span>
-                        </a>
-                    </th>
-                    <th class="Num" id="Nu3" scope="row">[Template]</th>
-                    <td class="Nome" id="No3">[Template]</td>
-                    <td class="Ender" id="End3">[Template]</td>
-                    <td class="Tel" id="Tel3">[Template]</td>
-                    <td class="Likes" id="Li3"><span class="material-icons-outlined"
-                            target="AvalPosto">thumb_up</span>[Template]
-                    </td>
-                    <td class="Dislikes" id="Di3"><span class="material-icons-outlined"
-                            target="NegAvalPosto">thumb_down</span>[Template]
-                    </td>
-                </tr>
-
-                <tr>
-                    <th>
-                        <a href="#detalhes-posto" data-bs-toggle="modal" id="ops" data-bs-target="#detalhes-posto">
-                            <span class="material-icons-outlined">
-                                info
-                            </span>
-                        </a>
-                    </th>
-                    <th class="Num" id="Nu4" scope="row">[Template]</th>
-                    <td class="Nome" id="No4">[Template]</td>
-                    <td class="Ender" id="End4">[Template]</td>
-                    <td class="Tel" id="Tel4">[Template]</td>
-                    <td class="Likes" id="Li4"><span class="material-icons-outlined"
-                            target="AvalPosto">thumb_up</span>[Template]
-                    </td>
-                    <td class="Dislikes" id="Di4"><span class="material-icons-outlined"
-                            target="NegAvalPosto">thumb_down</span>[Template]
-                    </td>
-                </tr>
-
-                <tr>
-                    <th>
-                        <a href="#detalhes-posto" data-bs-toggle="modal" id="ops" data-bs-target="#detalhes-posto">
-                            <span class="material-icons-outlined">
-                                info
-                            </span>
-                        </a>
-                    </th>
-                    <th class="Num" id="Nu5" scope="row">[Template]</th>
-                    <td class="Nome" id="No5">[Template]</td>
-                    <td class="Ender" id="End5">[Template]</td>
-                    <td class="Tel" id="Tel5">[Template]</td>
-                    <td class="Likes" id="Li5"><span class="material-icons-outlined"
-                            target="AvalPosto">thumb_up</span>[Template]
-                    </td>
-                    <td class="Dislikes" id="Di5"><span class="material-icons-outlined"
-                            target="NegAvalPosto">thumb_down</span>[Template]
-                    </td>
-                </tr>
-
-                <tr>
-                    <th>
-                        <a href="#detalhes-posto" data-bs-toggle="modal" id="ops" data-bs-target="#detalhes-posto">
-                            <span class="material-icons-outlined">
-                                info
-                            </span>
-                        </a>
-                    </th>
-                    <th class="Num" id="Nu6" scope="row">[Template]</th>
-                    <td class="Nome" id="No6">[Template]</td>
-                    <td class="Ender" id="End6">[Template]</td>
-                    <td class="Tel" id="Tel6">[Template]</td>
-                    <td class="Likes" id="Li6"><span class="material-icons-outlined"
-                            target="AvalPosto">thumb_up</span>[Template]
-                    </td>
-                    <td class="Dislikes" id="Di6"><span class="material-icons-outlined"
-                            target="NegAvalPosto">thumb_down</span>[Template]
-                    </td>
-                </tr>
-
-                <tr>
-                    <th>
-                        <a href="#detalhes-posto" data-bs-toggle="modal" id="ops" data-bs-target="#detalhes-posto">
-                            <span class="material-icons-outlined">
-                                info
-                            </span>
-                        </a>
-                    </th>
-                    <th class="Num" id="Nu7" scope="row">[Template]</th>
-                    <td class="Nome" id="No7">[Template]</td>
-                    <td class="Ender" id="End7">[Template]</td>
-                    <td class="Tel" id="Tel7">[Template]</td>
-                    <td class="Likes" id="Li7"><span class="material-icons-outlined"
-                            target="AvalPosto">thumb_up</span>[Template]
-                    </td>
-                    <td class="Dislikes" id="Di7"><span class="material-icons-outlined"
-                            target="NegAvalPosto">thumb_down</span>[Template]
-                    </td>
-                </tr>
-
-                <tr>
-                    <th>
-                        <a href="#detalhes-posto" data-bs-toggle="modal" id="ops" data-bs-target="#detalhes-posto">
-                            <span class="material-icons-outlined">
-                                info
-                            </span>
-                        </a>
-                    </th>
-                    <th class="Num" id="Nu8" scope="row">[Template]</th>
-                    <td class="Nome" id="No8">[Template]</td>
-                    <td class="Ender" id="End8">[Template]</td>
-                    <td class="Tel" id="Tel8">[Template]</td>
-                    <td class="Likes" id="Li8"><span class="material-icons-outlined"
-                            target="AvalPosto">thumb_up</span>[Template]
-                    </td>
-                    <td class="Dislikes" id="Di8"><span class="material-icons-outlined"
-                            target="NegAvalPosto">thumb_down</span>[Template]
-                    </td>
-                </tr>
-
-                <tr>
-                    <th>
-                        <a href="#detalhes-posto" data-bs-toggle="modal" id="ops" data-bs-target="#detalhes-posto">
-                            <span class="material-icons-outlined">
-                                info
-                            </span>
-                        </a>
-                    </th>
-                    <th class="Num" id="Nu9" scope="row">[Template]</th>
-                    <td class="Nome" id="No9">[Template]</td>
-                    <td class="Ender" id="End9">[Template]</td>
-                    <td class="Tel" id="Tel9">[Template]</td>
-                    <td class="Likes" id="Li9"><span class="material-icons-outlined"
-                            target="AvalPosto">thumb_up</span>[Template]
-                    </td>
-                    <td class="Dislikes" id="Di9"><span class="material-icons-outlined"
                             target="NegAvalPosto">thumb_down</span>[Template]
                     </td>
                 </tr>
@@ -598,7 +425,8 @@
 
     <!-- Container Rodapé ----------------------------------------------------------------------------------------------------------------------------->
 
-    <div class="container-fluid">
+    <div class="mb-5 mt-5 p-5"></div>
+    <div class="container-fluid fixed-bottom">
         <div class="row" id="LinhaRod">
             <!-- Dica de uso da plataforma -->
             <p>Dica: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod possimus quasi sunt dolor nobis
@@ -607,31 +435,9 @@
     </div>
 
     <!-- Script para atualizar lista com "arrayPostos" que está salvado no local storage ---------------------------------------------------->
-
     <script>
-        window.onload = function atualizar() {
-
-            let PostoInfo = JSON.parse(localStorage.getItem("arrayPostos"))
-            console.log(PostoInfo)
-
-            if (PostoInfo !== null) {
-
-                for (i = 0; i < PostoInfo.length; i++) {
-
-                    let numero = "Nu" + String(i)
-                    let nome = "No" + String(i)
-                    let end = "End" + String(i)
-                    let phone = "Tel" + String(i)
-
-                    document.getElementById(numero).innerHTML = i + 1
-                    document.getElementById(nome).innerHTML = PostoInfo[i].nome
-                    document.getElementById(end).innerHTML = PostoInfo[i].adress + " , " + PostoInfo[i].numero + " - " + PostoInfo[i].bairro + " , " + PostoInfo[i].Municipio + "."
-                    document.getElementById(phone).innerHTML = PostoInfo[i].Tel
-
-                }
-
-            }
-
+        window.onload = function () {
+            renderizarListaPostos("listastyle", false);
         }
     </script>
 
@@ -639,16 +445,11 @@
 </body>
 
 <script>
-
-    try {
-        const usuarioLogado = pegarUsuarioLogado();
-        if (usuarioLogado.papel === "admin") {
-            document.getElementById("mensagem-nome-usuario").innerText = `Olá ${usuarioLogado.nome}!!`;
-        } else {
-            throw new Error("Usuário sem permissão a esta página");
-        }
-    } catch (error) {
-        logout();
+    const usuarioLogado = pegarUsuarioLogado();
+    if (usuarioLogado && usuarioLogado.papel === "admin") {
+        document.getElementById("mensagem-nome-usuario").innerText = `Olá ${usuarioLogado.nome}!!`;
+    } else {
+        location.href = "Homepage.html";
     }
 </script>
 

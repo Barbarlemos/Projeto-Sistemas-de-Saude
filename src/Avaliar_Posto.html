@@ -123,4 +123,11 @@
 <script src="js/login.js"></script>
 <script src="js/avaliacaoPosto.js"></script>
 
+<script>
+    const usuarioLogado = pegarUsuarioLogado();
+    if (!(usuarioLogado && usuarioLogado.papel === "usuario")) {
+        location.href = "Homepage.html";
+    }
+</script>
+
 </html>
