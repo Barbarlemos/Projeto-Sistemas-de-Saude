@@ -1,8 +1,14 @@
-function cadst() {
+function gerarId() {
+    const atual = Number(localStorage.getItem('id_posto') ?? "500");
+    localStorage.setItem('id_posto', atual+1);
+    return atual;
+}
+
+async function cadst() {
 
 
     const postoObj = {
-        id: new Date().getTime(),
+        id: gerarId(),
         nome: String(document.getElementById("nome").value),
         cep: String(document.getElementById("cep").value),
         adress: String(document.getElementById("adress").value),
@@ -65,6 +71,11 @@ function cadst() {
         }
     }
 
+    if(postoObj.Serv.length === 0) {
+        await swal("Ops!", "Selecione pelo menos 1 especialidade para o posto", "error");
+        return false;
+    }
+
 
     if (localStorage.getItem("arrayPostos") === null) {
 
@@ -81,6 +92,7 @@ function cadst() {
         localStorage.setItem("arrayPostos", arrayPostosJson)
     }
 
-    alert(postoObj.nome + " cadastrado com sucesso!")
-
+    await swal("Sucesso!", `Posto ${postoObj.nome} cadastrado`, "success");
+    location.href = 'Homepage_ADMIN.html';
+    return true;
 }

@@ -26,6 +26,12 @@
         href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
         rel="stylesheet">
 
+    <!-- Importação SweetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+    <script src="js/login.js"></script>
+
 </head>
 
 
@@ -58,14 +64,14 @@
     <!-- Container Form ----------------------------------------------------------------------------------------------------------------------------->
 
     <div class="container container-cadastro-posto">
-        <form>
+        <form onsubmit="cadst(); return false;">
 
 
             <div class="row">
                 <div class="col-md-8 col-12">
                     <div class="form-group">
                         <label for="nome">Nome do posto</label>
-                        <input id="nome" type="text" class="form-control form-control-lg"
+                        <input id="nome" type="text" class="form-control form-control-lg" required
                             placeholder="Ex:Centro de Saúde Santa Rosa">
                     </div>
                 </div>
@@ -76,7 +82,7 @@
                 <div class="col-md-4 col-8">
                     <div class="form-group">
                         <label>Cep</label>
-                        <input id="cep" type="text" class="form-control form-control-lg" placeholder="00000-000">
+                        <input id="cep" onblur="handlerCep()" name="cep" required type="number" class="form-control form-control-lg" placeholder="00000-000">
                     </div>
                 </div>
             </div>
@@ -85,14 +91,14 @@
                 <div class="col-md-6 col-8">
                     <div class="form-group">
                         <label>Endereço</label>
-                        <input id="adress" type="text" class="form-control form-control-lg"
+                        <input id="adress" name="rua" required type="text" class="form-control form-control-lg"
                             placeholder="Ex:Rua dois de março">
                     </div>
                 </div>
                 <div class="col-md-2 col-4">
                     <div class="form-group">
                         <label>Nº</label>
-                        <input id="num" type="text" class="form-control form-control-lg" placeholder="Ex: 323 A">
+                        <input id="num" required type="text" class="form-control form-control-lg" placeholder="Ex: 323 A">
                     </div>
                 </div>
             </div>
@@ -101,14 +107,14 @@
                 <div class="col-md-6 col-12">
                     <div class="form-group">
                         <label>Bairro</label>
-                        <input id="bairro" type="text" class="form-control form-control-lg"
+                        <input id="bairro" name="bairro" required type="text" class="form-control form-control-lg"
                             placeholder="Ex: Nova união">
                     </div>
                 </div>
                 <div class="col-md-4 col-12">
                     <div class="form-group">
                         <label>Município</label>
-                        <select id="Mun" class="form-control form-control-lg">
+                        <select id="Mun" name="cidade" class="form-control form-control-lg">
                             <option>Belo Horizonte</option>
                             <option>Betim</option>
                             <option>Caeté</option>
@@ -133,7 +139,7 @@
                 <div class="col-md-4 col-8">
                     <div class="form-group">
                         <label>Telefone</label>
-                        <input id="Tel" type="text" class="form-control form-control-lg"
+                        <input id="Tel" required type="text" class="form-control form-control-lg"
                             placeholder="Ex: (31)99234-0192">
                     </div>
                 </div>
@@ -145,13 +151,13 @@
                 <div class="col-md-4 col-12">
                     <div class="form-group">
                         <label>Horário de abertura</label>
-                        <input id="abert" type="text" class="form-control form-control-lg" placeholder="HH:MM">
+                        <input id="abert" required type="time" class="form-control form-control-lg" placeholder="HH:MM">
                     </div>
                 </div>
                 <div class="col-md-4 col-12">
                     <div class="form-group">
                         <label>Horário de fechamento</label>
-                        <input id="fech" type="text" class="form-control form-control-lg" placeholder="HH:MM">
+                        <input id="fech" required type="time" class="form-control form-control-lg" placeholder="HH:MM">
                     </div>
                 </div>
             </div>
@@ -204,8 +210,8 @@
 
             <div class="row">
                 <div class="col-12 text-end">
-                    <a href="/src/Homepage_ADMIN.html"><button type="button" onclick="cadst()"
-                            class="btn btn-salvar">Salvar</button></a>
+                    <button type="submit"
+                            class="btn btn-salvar">Salvar</button>
                 </div>
             </div>
         </form>
@@ -222,7 +228,7 @@
         </div>
     </div>
 
-    <script src="/src/js/cadastroPosto.js"></script>
+    <script src="js/cadastroPosto.js"></script>
 
 </body>
 

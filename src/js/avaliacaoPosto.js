@@ -48,7 +48,7 @@ async function handleAvaliar() {
         postoAtual.avaliacoes.push(avaliacao);
         salvarPosto(postoAtual);
         await swal("Sucesso", "A sua avaliação foi registrada!", "success");
-        location.href = "Homepage.html";
+        location.href = "Homepage_LOGADO.html";
     }
 
 }
