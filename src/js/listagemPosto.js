@@ -70,7 +70,6 @@ function renderizarEspecialidades(servicos) {
 }
 function renderizarModalDetalhesPosto(id, habilitarAvaliacao=true) {
     const posto = buscarPosto(id);
-    console.log(posto);
     const endereco = "R. "+posto.adress + ", bairro "+ posto.bairro + ", " + posto.Municipio;
     const totalAvaliacoes = calcularVotos(posto);
     const modal =  `
@@ -135,7 +134,7 @@ function renderizarModalDetalhesPosto(id, habilitarAvaliacao=true) {
 
 
 
-function renderizarLinhaPosto({id, nome, Municipio, Tel, adress, bairro, numero, avaliacoes}, habilitarAvaliacao=true) {
+function renderizarLinhaPosto({id, nome, Municipio, Tel, adress, bairro, numero, avaliacoes, cep}, habilitarAvaliacao=true) {
     const endereco = adress + " , " + numero + " - " + bairro + " , " + Municipio + ".";
     const totalAvaliacoes = calcularVotos({avaliacoes});
 
@@ -146,6 +145,11 @@ function renderizarLinhaPosto({id, nome, Municipio, Tel, adress, bairro, numero,
                 <a href="#detalhes-posto" data-bs-toggle="modal" data-bs-target="#detalhes-posto" onclick="renderizarModalDetalhesPosto('${id}', ${parametroAvaliacao})">
                     <span class="material-icons-outlined">
                         info
+                    </span>
+                </a>
+                <a href="https://www.google.com/maps/place/R.${adress}, ${numero} - ${bairro}, ${Municipio} - MG, ${cep}" target="_blank">
+                    <span class="material-icons-outlined">
+                        place
                     </span>
                 </a>
             </td>
