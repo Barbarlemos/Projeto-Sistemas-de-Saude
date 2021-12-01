@@ -53,7 +53,7 @@
 
                 <!-- BARRA DE PESQUISA -->
                 <div class="col-xl-6">
-                    <input class="form-control" type="text" placeholder="Pesquisar postos de saúde próximos de"
+                    <input class="form-control" type="text" placeholder="Pesquisar postos de saúde" onchange="renderizarListaPostos('listastyle', false, this.value);"
                         aria-label="Search" id="barrapesquisa">
                 </div>
 
@@ -133,7 +133,7 @@
                             <span class="material-icons-outlined" target="F_btnSPAN">map</span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a onclick="fregiao('Todas regiões')" class="dropdown-item active" href="#">Todas regiões</a></li>
+                            <li><a onclick="fregiao('Todas regiões')" class="dropdown-item" href="#">Todas regiões</a></li>
                             <li><a onclick="fregiao('Belo Horizonte')" class="dropdown-item" href="#">Belo Horizonte</a></li>
                             <li><a onclick="fregiao('Betim')" class="dropdown-item" href="#">Betim</a></li>
                             <li><a onclick="fregiao('Caeté')" class="dropdown-item" href="#">Caeté</a></li>
@@ -175,8 +175,6 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#" onclick="fordenacao('Melhor avaliados')">Melhor avaliados</a></li>
                             <li><a class="dropdown-item" href="#" onclick="fordenacao('Mais avaliados')">Mais avaliados</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="fordenacao('Mais procurados')">Mais procurados</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="fordenacao('Somente abertos')">Somente abertos</a></li>
                             <li><a class="dropdown-item" href="#" onclick="fordenacao('Alfabética')">Alfabética</a></li>
                         </ul>
                     </div>
@@ -198,7 +196,7 @@
 
                 <!-- Filtros Usados -->
                 <div class="col-6" id="RegMetro">
-                    <p>toda região metropolitana</p>
+                    <p id="regiao_atual">toda região metropolitana</p>
                 </div>
 
             </div>
@@ -592,7 +590,8 @@
 
     <!-- Container Rodapé ----------------------------------------------------------------------------------------------------------------------------->
 
-    <div class="container-fluid">
+    <div class="mb-5 mt-5 p-5"></div>
+    <div class="container-fluid fixed-bottom">
         <div class="row" id="LinhaRod">
             <!-- Dica de uso da plataforma -->
             <p>Dica: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod possimus quasi sunt dolor nobis

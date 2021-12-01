@@ -172,10 +172,60 @@ function buscarParametrosURL() {
     };
 }
 
-function renderizarListaPostos(idLista, habilitarAvaliacao=true) {
+function renderizarListaPostos(idLista, habilitarAvaliacao=true, filtroTexto = "") {
     let html = "";
     const parametros = buscarParametrosURL();
-    for(const posto of carregarTodosPostos()) {
+    let pesquisa = carregarTodosPostos();
+
+    function simplificarTexto(texto) {
+        return texto.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/ /g, "");
+    }
+
+    function compararTextos(txt1, txt2) {
+        return simplificarTexto(txt1) === simplificarTexto(txt2);
+    }
+
+    if(parametros.regiao) {
+        document.getElementById("regiao_atual").innerText = parametros.regiao === "Todas regiões" ? "toda região metropolitana" : parametros.regiao;
+        if(!simplificarTexto(parametros.regiao).startsWith("todas")) {
+            pesquisa = pesquisa.filter(i=> compararTextos(i.Municipio, parametros.regiao));
+        }
+    }
+    if(parametros.servico) {
+        const servico = simplificarTexto(parametros.servico);
+        if(!servico.startsWith("todos")) {
+            pesquisa = pesquisa.filter(i => {
+                const exists = i.Serv.find(j=>simplificarTexto(j) === servico);
+                return !!exists;
+            });
+        }
+    }
+
+    if(filtroTexto) {
+        const filtroLimpo = filtroTexto.toLowerCase();
+        pesquisa = pesquisa.filter(i=> JSON.stringify(i).toLowerCase().indexOf(filtroLimpo) !== -1);
+    }
+
+    if(parametros.ordenacao) {
+        
+        pesquisa = pesquisa.map(i => {
+            const votos = calcularVotos(i);
+            return {...i, votos};
+        });
+        if(parametros.ordenacao === "Melhor avaliados") {
+            pesquisa = pesquisa.sort((a,b) => b.votos.positivo - a.votos.positivo).sort((a,b) => (b.votos.positivo - b.votos.negativo) - (a.votos.positivo - a.votos.negativo));
+        }
+
+        if(parametros.ordenacao === "Mais avaliados") {
+            pesquisa = pesquisa.sort((a,b) => (b.votos.positivo + b.votos.negativo) - (a.votos.positivo + a.votos.negativo));
+        }
+
+        if(parametros.ordenacao === "Alfabética") {
+            pesquisa = pesquisa.sort((a,b) => a.nome > b.nome ? 1 : -1);
+        }
+    }
+
+    for(const posto of pesquisa) {
         html += renderizarLinhaPosto(posto, habilitarAvaliacao);
     }
 
