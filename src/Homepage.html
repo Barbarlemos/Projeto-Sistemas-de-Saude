@@ -33,6 +33,10 @@
     <script src="js/listagemPosto.js"></script>
 
     <script>
+        iniciarEventos();
+    </script>
+
+    <script>
         const usuarioLogado = pegarUsuarioLogado();
         if(usuarioLogado) {
             if(usuarioLogado.papel === "admin") location.href = "Homepage_ADMIN.html";
@@ -61,7 +65,7 @@
 
                 <!-- BARRA DE PESQUISA -->
                 <div class="col-xl-6">
-                    <input class="form-control" type="text" placeholder="Pesquisar postos de saúde" onchange="renderizarListaPostos('listastyle', false, this.value);"
+                    <input class="form-control" type="text" placeholder="Pesquisar postos de saúde" onchange="pesquisarLista(this.value);"
                         aria-label="Search" id="barrapesquisa">
                 </div>
 
@@ -426,13 +430,6 @@
                 totam asperiores illo atque obcaecati perferendis.</p>
         </div>
     </div>
-
-    <!-- Script para atualizar lista com "arrayPostos" que está salvado no local storage ---------------------------------------------------->
-    <script>
-        window.onload = function () {
-            renderizarListaPostos("listastyle", false);
-        }
-    </script>
 
 </body>
 
