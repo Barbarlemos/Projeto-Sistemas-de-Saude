@@ -1,3 +1,23 @@
+//////////////////////// PAGINACAO
+function paginarLista(items, pagina, limitItems){
+	let result = [];
+	let totalPage = Math.ceil( items.length / limitItems );
+	let count = ( pagina * limitItems ) - limitItems;
+	let delimiter = count + limitItems;
+	
+	if(pagina <= totalPage){
+		for(let i=count; i<delimiter; i++){
+			if(items[i] != null){
+				result.push(items[i]);
+			}
+			count++;
+		}
+	}
+
+	return result;
+}
+
+
 function carregarTodosPostos() {
     return JSON.parse(localStorage.getItem("arrayPostos") || "[]");
 }
@@ -176,7 +196,7 @@ function buscarParametrosURL() {
     };
 }
 
-function renderizarListaPostos(idLista, habilitarAvaliacao=true, filtroTexto = "") {
+function renderizarListaPostos(idLista, habilitarAvaliacao=true, filtroTexto = "", pagina=null) {
     let html = "";
     const parametros = buscarParametrosURL();
     let pesquisa = carregarTodosPostos();
@@ -229,14 +249,57 @@ function renderizarListaPostos(idLista, habilitarAvaliacao=true, filtroTexto = "
         }
     }
 
+    const totalPages = Math.ceil(pesquisa.length/10);
+    if(pagina !== null) {
+        pesquisa = paginarLista(pesquisa, pagina, 10);
+    }
+
     for(const posto of pesquisa) {
         html += renderizarLinhaPosto(posto, habilitarAvaliacao);
     }
 
     document.getElementById(idLista).innerHTML = html;
+    return totalPages;
 }
 
+function renderizarPaginacao(totalPaginas=10, paginaAtual=1){
+    let html = [];
 
+    const espaco = `<li class="page-item"><a class="page-link" href="#" onclick="return false">...</a></li>`;
+
+    for(let i=1; i<=totalPaginas; i++) {
+        html.push(`<li class="page-item ${paginaAtual === i? 'active' : ''}"><a class="page-link" href="#" onclick="changePage(event, ${i})">${i}</a></li>`);
+    }
+
+    const visiveis = [];
+    visiveis.push(`
+    <li class="page-item ${paginaAtual === 1 ? 'disabled': ''}">
+        <a class="page-link" href="#" tabindex="-1"  onclick="changePage(event, ${paginaAtual-1})">Anterior</a>
+    </li>
+    `);
+    if(paginaAtual-2 >= 1) {
+        visiveis.push(espaco);
+    }
+
+    const inicio = (paginaAtual + 2 >= totalPaginas) ? paginaAtual - 3 : paginaAtual - 2;
+
+    for(let i=inicio;visiveis.length < 6;i++) {
+        if(i >= html.length) {
+            break;
+        }
+        if(i >= 0) {
+            visiveis.push(html[i]);
+        }
+    }
+    if(paginaAtual+2 <= totalPaginas) {
+        visiveis.push(espaco);
+    }
+    visiveis.push(`<li class="page-item ${paginaAtual === totalPaginas ? 'disabled': ''}">
+        <a class="page-link" href="#" onclick="changePage(event, ${paginaAtual+1})" >Próximo</a>
+    </li>`);
+
+    document.getElementById('Pgnt').innerHTML = visiveis.join("");
+}
 
 
 
@@ -257,4 +320,29 @@ function fordenacao(valor) {
     const url = new URLSearchParams(location.search);
     url.set("ordenacao", valor);
     location.href = location.href.split("?")[0] + "?" + url.toString();
+}
+
+
+function changePage(event, pagina) {
+    event.preventDefault();
+    window.dispatchEvent(new CustomEvent("changepage", {detail: pagina}));
+}
+
+function pesquisarLista(valor) {
+    const total = renderizarListaPostos("listastyle", false, valor, 1);
+    renderizarPaginacao(total, 1)
+}
+
+function iniciarEventos() {
+    window.addEventListener("load",  function () {
+        const total = renderizarListaPostos("listastyle", false, "", 1);
+        renderizarPaginacao(total, 1)
+    
+    });
+    
+    window.addEventListener("changepage", function (event) {
+        const pagina = Number(event.detail);
+        const total = renderizarListaPostos("listastyle", false, document.getElementById("barrapesquisa").value, pagina);
+        renderizarPaginacao(total, pagina)
+    })
 }
