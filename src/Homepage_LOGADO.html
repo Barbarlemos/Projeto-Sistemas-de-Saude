@@ -428,15 +428,11 @@
 </body>
 
 <script>
-    try {
-        const usuarioLogado = pegarUsuarioLogado();
-        if (usuarioLogado.papel === "usuario") {
-            document.getElementById("mensagem-nome-usuario").innerText = `Olá ${usuarioLogado.nome}!!`;
-        } else {
-            throw new Error("Usuário sem permissão a esta página");
-        }
-    } catch (error) {
-        logout();
+    const usuarioLogado = pegarUsuarioLogado();
+    if (usuarioLogado && usuarioLogado.papel === "usuario") {
+        document.getElementById("mensagem-nome-usuario").innerText = `Olá ${usuarioLogado.nome}!!`;
+    } else {
+        location.href = "Homepage.html";
     }
 </script>
 

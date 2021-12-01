@@ -32,6 +32,14 @@
 
     <script src="js/listagemPosto.js"></script>
 
+    <script>
+        const usuarioLogado = pegarUsuarioLogado();
+        if(usuarioLogado) {
+            if(usuarioLogado.papel === "admin") location.href = "Homepage_ADMIN.html";
+            if(usuarioLogado.papel === "usuario") location.href = "Homepage_LOGADO.html";
+        }
+    </script>
+
 
 </head>
 
